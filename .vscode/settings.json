@@ -1,0 +1,4 @@
+{
+    "vim.enableNeovim": false,
+    "vim.neovimUseConfigFile": true
+}
