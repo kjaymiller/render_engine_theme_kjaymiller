@@ -3,12 +3,12 @@ requires = ["setuptools", "setuptools_scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = render-engine-theme-kjaymiller
+name = "render-engine-theme-kjaymiller"
 dynamic = ["version"]
 description = "This is a theme based on the design of kjaymiller.com at the time"
 readme = "README.md"
 
-dependencies = []
+dependencies = ['jinja2']
 
 [project.optional-dependencies]
 dev = [
