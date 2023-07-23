@@ -8,7 +8,10 @@ dynamic = ["version"]
 description = "This is a theme based on the design of kjaymiller.com at the time"
 readme = "README.md"
 
-dependencies = ['jinja2']
+dependencies = [
+    'jinja2',
+    'render-engine-tailwindcss'
+    ]
 
 [project.optional-dependencies]
 dev = [
@@ -31,11 +34,8 @@ repository = "https://github.com/kjaymiller/render-engine-theme-kjaymiller"
 documentation = "https://example.com/docs"
 
 [tool.setuptools.package-data]
-"*" = ["*.html", "*.txt", "*.xml", "*.md"]
-
-
-[project.scripts]
-render-engine = "render_engine.cli:cli"
+"static" = ["**/*.css", "**/*.js", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.svg", "**/*.ico"]
+"templates"= ["*.html", "*.txt", "*.xml", "*.md"]
 
 
 [tool.pytest.ini_options]
