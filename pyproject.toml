@@ -33,11 +33,6 @@ homepage = "https://example.com"
 repository = "https://github.com/kjaymiller/render-engine-theme-kjaymiller"
 documentation = "https://example.com/docs"
 
-[tool.setuptools.package-data]
-"static" = ["**/*.css", "**/*.js", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.svg", "**/*.ico"]
-"templates"= ["*.html", "*.txt", "*.xml", "*.md"]
-
-
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 
