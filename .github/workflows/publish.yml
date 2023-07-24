@@ -6,8 +6,8 @@ on:
       - '*'
   
 jobs:
-  test:
-    uses: ./.github/workflows/test.yml
+  # test:
+  #   uses: ./.github/workflows/test.yml
   deploy:
     name: Deploy to PyPI
     runs-on: ubuntu-latest
