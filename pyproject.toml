@@ -18,6 +18,9 @@ dev = [
     "pytest",
     "pytest-mock",
     "pytest-cov",
+    "pytest-playwright",
+    "axe-playwright-python",
+    "playwright",
     "ruff",
     "black",
     ]
