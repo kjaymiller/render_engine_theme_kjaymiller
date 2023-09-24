@@ -1,7 +1,9 @@
+{% set COLOR_MAIN_1 = theme.colors.main1 or "gray-600" %}
+
 <nav role="navigation" class="
   bg-gradient-to-br    
-from-purple-600
-to-indigo-800
+from-{{COLOR_MAIN_1}}
+{{COLOR_MAIN_1 | theme_gradient_to(100) }}
   flex
   flex-wrap
   items-baseline
@@ -21,7 +23,7 @@ to-indigo-800
             hover:opacity-100
             hover:text-indigo-800
             hover:font-semibold
-            text-gray-200
+            text-slate-800
             no-underline
           " href="{{link.url}}">
         {{link.text}}
