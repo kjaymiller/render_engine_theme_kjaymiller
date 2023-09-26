@@ -39,10 +39,14 @@
     {% else %}
     <h2>{{other.title}}</h2>
     {% endif %}
-    {% for other_section in other %}
-    <h2 class="my-4 text-3xl font-bold"><a href="{{other_section.target}}">{{other_section.title}}</a></h2>
+    {% for other_section in other['sections'] %}
+    {% if other_section.target %}
+    <h3 class="my-4 text-xl font-bold"><a href="{{other_section.target}}">{{other_section.title}}</a></h3>
+    {% else %}
+    <h3 class="my-4 text-xl font-bold">{{other_section.title}}</h3>
+    {% endif %}
     {% if other_section.from_tempate %}    
-      {% include secondary.from_template %}
+      {% include other_section.from_template %}
     {% else %}
       <p>
         {{other_section.content}}
