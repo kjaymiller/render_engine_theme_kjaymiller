@@ -45,6 +45,7 @@
     {% else %}
     <h3 class="my-4 text-xl font-bold">{{other_section.title}}</h3>
     {% endif %}
+    {{other_section}}
     {% if other_section.from_tempate %}    
       {% include other_section.from_template %}
     {% else %}
