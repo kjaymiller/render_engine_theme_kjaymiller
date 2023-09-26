@@ -2,18 +2,10 @@
 {% block content %}
 <div class="border my-5 p-3 shadow-lg">
     <h2 class="text-3xl text-purple-700 my-2">I'm a pretty open book </h2>
-    <p>if you have a question or just want to give some feedback. Please fill out the form below... It will go to my email and we can chat.</p>
-
-    <p>
-    If you would like to here my thoughts in your inbox regularly, You can also Subscribe to my Newsletter.
-    </p>
-
-    <p>
-    Reaching out to me via this form will not add you to any list (except maybe my personal contacts).
-    </p>
+    {{contact.content}}
 </div>
 
-<form class="p-2 border rounded-lg" method="POST" action="https://formspree.io/kjaymiller@gmail.com">
+<form class="p-2 border rounded-lg" method="POST" action="https://formspree.io/f/{{author.email}}">
         <div class="m-2">
             <label class="font-bold" for="#name">Name</label>
             <input id="name" class="border rounded p-2" type="text" name="Name" placeholder="What I should call you" style="width: 30%;">
@@ -37,12 +29,10 @@
 
 <section class="section">
 <div class="my-5 py-6 ">
-<h2 class="text-2xl">Email not your thing?</h2>
-
 <div class="content">
-    <p>You can reach out to me on social media.</p>
+    <h3 class="text-2xl">Social Media</h3>
 
-    {% include 'social-cards.html' %}
+    {% include 're-kjm-social-cards.html' %}
 
 </div>
 </div>
