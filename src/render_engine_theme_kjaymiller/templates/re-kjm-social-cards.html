@@ -1,8 +1,8 @@
-{% macro social_icon_color(default-color) %}
+{% macro social_icon_color(default_color) %}
 {% if theme.colors.social %}
     {{theme.colors.social}}
 {% else %}
-    {{default-color}}
+    {{default_color}}
 {% endmacro %}
 
 {% if theme.links.youtube %}
