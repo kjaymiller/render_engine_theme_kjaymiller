@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="border my-5 p-3 shadow-lg">
-    <h2 class="text-3xl text-purple-700 my-2">I'm a pretty open book </h2>
-    {{contact.content}}
+    <h2 class="text-2xl text-purple-700 my-2">Email Me</h2>
+    {% if content %}
+    {{content}}
+    {% endif %}
 </div>
 
 <form class="p-2 border rounded-lg" method="POST" action="https://formspree.io/f/{{author.email}}">
