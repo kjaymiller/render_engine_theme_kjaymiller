@@ -2,25 +2,53 @@
 <!-- <link rel="stylesheet" type="text/css" href="/static/css/index.css" /> -->
 {% endblock %}
 {% block content %}
-  <section class="py-4 my-2">
-    <h2 class="text-4xl my-3 font-bold"><a href="{{'microblog'|url_for()}}">Microblog</a></h2>
-    <article class="prose lg:prose-xl dark:prose-invert prose-slate">
-    {{microblog[0].content}}
-    </article>
-  </section>
+  {% if hero %}
+    <section class="py-4 my-2">
+      {% if hero.target %}
+      <h2 class="text-4xl my-3 font-bold"><a href="{{hero.target}}">{{hero.title}}</a></h2>
+      {% else %}
+      <h2 class="text-4xl my-3 font-bold">{{hero.title}}</h2>
+      {% endif %}
+      <article class="prose lg:prose-lg dark:prose-invert prose-slate">
+        {% if hero.from_template %}
+        {% include hero.from_template %}
+        {% else %}
+        {{hero.content}}
+        {% endif %}
+      </article>
+    </section>
+  {% endif %}
+  {% if secondary %}
   <section class="my-2 py-2">
-    <h2 class="my-4 text-4xl font-bold"><a href="{{'blog'|url_for()}}">Blog</a></h2>
-    {% set latest_blog = blog[0] %}
-    <h3 class="text-2xl"><a href="{{latest_blog.url_for()}}">{{latest_blog.title}}</a></h3>
+    {% if hero.target %}
+    <h2 class="my-4 text-3xl font-bold"><a href="{{secondary.target}}">{{secondary.title}}</a></h2>
+    {% else %}
+    <h2 class="my-4 text-3xl font-bold">{{secondary.title}}</h2>
+    {% endif %}
+    {% if secondary.from_template%}
+        {% include secondary.from_template %}
+    {% else %}
+      {{secondary.content}}
+    {% endif %}
+  {% endif %}
   </section>
+  {% if other %}
 <section>
-  {% set pcn = pcn[0] %}
-  <h2 class="my-4 text-2xl font-bold"><a href="{{'python-community-news'|url_for()}}">Python Community News</a></h2>
-  <a class="text-xl" href="{{pcn.url_for()}}">{{pcn.title}}</a>
-</section>
-<section>
-  {% set conduit = conduit[0] %}
-  <h2 class="my-4 text-2xl font-bold"><a href="{{'conduit'|url_for()}}">Conduit</a></h2>
-  <a class="text-xl" href="{{conduit.url_for()}}">{{conduit.title}}</a>
+    {% if other.target %}
+    <h2><a href="{{other.target}}">{{other.title}}</a></h2>
+    {% else %}
+    <h2>{{other.title}}</h2>
+    {% endif %}
+    {% for other_section in other %}
+    <h2 class="my-4 text-3xl font-bold"><a href="{{other_section.target}}">{{other_section.title}}</a></h2>
+    {% if other_section.from_tempate %}    
+      {% include secondary.from_template %}
+    {% else %}
+      <p>
+        {{other_section.content}}
+      <p>
+    {% endif %}
+    {% endfor %}
+  {% endif %}
 </section>
 {% endblock %}
