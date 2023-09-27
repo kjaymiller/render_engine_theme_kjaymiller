@@ -1,13 +1,17 @@
 <hr />
-<footer role="contentinfo" class="bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
-  <div class="lg:flex md:mx-auto h-full justify-around items-center text-small">
+<footer role="contentinfo" class="grid grid-cols-3 bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
+  <div id="footer-column-1" class= md:mx-auto text-small">
     <p>{{SITE_URL}}</p>
-    <p>Website Created with<a
-                            class="hover:underline" href="https://github.com/render-engine/render-engine">Render Engine</a> and the <a href="https://github.com/kjaymiller/render-engine-kjaymiller-theme">kjaymiller theme</a>
+    <p>Website Created with <a href="https://github.com/render-engine/render-engine">Render Engine</a> and <a
+                            class="hover:underline" href="https://github.com/kjaymiller/render_engine_theme_kjaymiller">kjaymiller theme</a>
     
-    hosted on Azure Static Web Apps                        <div>
-      <a class="hover:underline" href="/blog.rss"><span class="icon"><i class="fas fa-rss"></i></a>
-      {% include 're-kjm-social-cards.html' %}
     </div>
+    <div id="footer-column-2">
+      {% if theme.footer_column2 %}
+      {% include theme.footer_column2 %}
+      {% endif %}
+    </div>
+    <div>
+    {% include 're-kjm-social-cards.html' %}
   </div>
 </footer>
