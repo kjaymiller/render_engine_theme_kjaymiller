@@ -1,6 +1,6 @@
 {% set COLOR_MAIN_1 = theme.colors.main1 or "gray-600" %}
 
-<nav role="navigation" class="
+<nav role="navigation"><div class="
   bg-gradient-to-br    
 from-{{COLOR_MAIN_1}}
 {{COLOR_MAIN_1 | theme_gradient_to(100) }}
@@ -13,21 +13,20 @@ from-{{COLOR_MAIN_1}}
     <h1 class="title mx-3 text-5xl font-bold text-gray-200">
       <a class="no-underline" href="/">{{SITE_TITLE}}</a>
     </h1>
-    <div class="hidden md:block p-2">
+    </div>
+    <div class="my-2 p-2 flex justify-center">
     {% for link in HEADER_LINKS %}
       <a class="
             p-3
+            mx-3
             rounded-lg
             hover:bg-gray-100
             opacity-75
             hover:opacity-100
             hover:text-indigo-800
+            font-bold
             hover:font-semibold
-            {% if COLOR_MAIN_1 | theme_color_value > 500 %}
             text-slate-800
-            {% else %}
-            text-slate-100
-            {% endif %}
             no-underline
           " href="{{link.url}}">
         {{link.text}}
