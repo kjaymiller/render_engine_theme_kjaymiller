@@ -23,7 +23,11 @@ from-{{COLOR_MAIN_1}}
             hover:opacity-100
             hover:text-indigo-800
             hover:font-semibold
+            {% if COLOR_MAIN_1 | theme_color_value > 500 %}
             text-slate-800
+            {% else %}
+            text-slate-100
+            {% endif %}
             no-underline
           " href="{{link.url}}">
         {{link.text}}

@@ -69,6 +69,10 @@ def to_theme_object(theme_color:str) -> TailwindCSSColorSpec:
     match = re.match(r"([a-z]+)-(\d{2,3})", theme_color)
     return TailwindCSSColorSpec(match.group(1), int(match.group(2)))
 
+def get_color_string_value(theme_color:str) -> int:
+    """Split a string based on the tailwind spec"""
+    color = to_theme_object(theme_color)
+    return color.value
 
 # Filters for the engine
 def get_theme_gradient_to(base_value:str, increment_value:int) -> str:
@@ -86,5 +90,6 @@ kjaymiller = Theme(
     static_dir= pathlib.Path(__file__).parent / "static",
     filters = {
         "theme_gradient_to": get_theme_gradient_to,
+        "theme_color_value": get_color_string_value,
         },
 )
