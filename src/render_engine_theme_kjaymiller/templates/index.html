@@ -5,9 +5,9 @@
   {% if hero %}
     <section class="py-4 my-2">
       {% if hero.target %}
-      <h2 class="text-4xl my-3 font-bold"><a href="{{hero.target}}">{{hero.title}}</a></h2>
+      <h2 class="text-3xl my-3 font-semibold"><a href="{{hero.target}}">{{hero.title}}</a></h2>
       {% else %}
-      <h2 class="text-4xl my-3 font-bold">{{hero.title}}</h2>
+      <h2 class="text-3xl my-3 font-semibold">{{hero.title}}</h2>
       {% endif %}
       <article class="prose lg:prose-lg dark:prose-invert prose-slate">
         {% if hero.from_template %}
@@ -21,9 +21,9 @@
   {% if secondary %}
   <section class="my-2 py-2">
     {% if hero.target %}
-    <h2 class="my-4 text-3xl font-bold"><a href="{{secondary.target}}">{{secondary.title}}</a></h2>
+    <h2 class="my-4 text-2xl font-semibold"><a href="{{secondary.target}}">{{secondary.title}}</a></h2>
     {% else %}
-    <h2 class="my-4 text-3xl font-bold">{{secondary.title}}</h2>
+    <h2 class="my-4 text-2xl font-semibold">{{secondary.title}}</h2>
     {% endif %}
     {% if secondary.from_template%}
         {% include secondary.from_template %}
