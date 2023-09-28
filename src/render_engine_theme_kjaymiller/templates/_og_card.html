@@ -1,0 +1,11 @@
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:type" content="article" />
+  {% if description is defined %}<meta property="og:description" content="{{description}}" />{% endif %}
+  <meta property="og:url" content="{{url|to_absolute}}" />
+  {% set l_image="https://kjaymiller.azureedge.net/media/" + slug + ".jpg" %}
+  <meta property="og:image" content="{{l_image|to_absolute}}" />
+
+  <meta name="twitter:title" content="{{title}}" />
+  {% if description is defined %}<meta name="twitter:description" content="{{description}}" />{% endif %}
+  <meta name="twitter:image" content="{{l_image|to_absolute}}" />
+  <meta name="twitter:card" content="summary_large_image" />

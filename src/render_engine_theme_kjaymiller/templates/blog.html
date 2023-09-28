@@ -1,23 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}{{title}}{% endblock %}
-
 {% block head %}
+  <!-- Pygments for code blocks -->
   <link rel="stylesheet" href="/static/css/pygments.css" />
-  <meta property="og:title" content="{{title}}" />
-  <meta property="og:type" content="article" />
-  {% if description is defined %}<meta property="og:description" content="{{description}}" />{% endif %}
-  <meta property="og:url" content="{{url|to_absolute}}" />
-  {% set l_image="https://kjaymiller.azureedge.net/media/" + slug + ".jpg" %}
-  <meta property="og:image" content="{{l_image|to_absolute}}" />
-
-  <meta name="twitter:title" content="{{title}}" />
-  {% if description is defined %}<meta name="twitter:description" content="{{description}}" />{% endif %}
-  <meta name="twitter:image" content="{{l_image|to_absolute}}" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Meta Card Tags-->
+  {% include "_og_card.html" %}
+  
 {% endblock %}
 {% block content %} 
   <article class="prose lg:prose-xl dark:prose-invert prose-slate">
-    {% if not no_feature_image %}
+    {% if image is defined %}
       <div class="feature-image overflow-hidden">
         <img src="{{image}}" class="max-h-72 rounded-lg shadow">
       </div>
@@ -26,16 +18,9 @@
       <h1 class="title">{{title}}</h1>
       {% if subtitle %}: {{subtitle}}{%endif%}
       <small class="column is-narrow">
-      {{date_friendly}}
+      {{date | format_datetime}}
       </small>
-        </div>
-        {% include 'github_disclaimer.html' %}
-
-        {% if link %}
-        <div class="notification is-small">
-        </div>
-        {% endif %}
-        {% include 'YouTube_embed.html' %}
+      </div>
 
     <section class="section min-h-screen">
           <h4>{{date}}</h4>
