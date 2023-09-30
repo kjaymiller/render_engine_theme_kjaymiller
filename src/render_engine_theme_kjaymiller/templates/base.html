@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% if analytics is defined %}
-    {% include '_analytics.html' %}
-    {% endif %}
-    <!-- Required meta tags -->
-    {% if theme.favicon is defined %}
-    <link rel="icon" href="{{favicon}}" />
-    {% endif %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/static/css/tailwind.css" />
-    {% if theme.fontawesome is defined %}
-    <script src="https://kit.fontawesome.com/{{theme.fontawesome}}.js" crossorigin="anonymous"></script>
-    {% endif %}
-    {% block head %}{% endblock %}
-    <title>
-      {% if title != "Index" %}
-      {{title}} - {% endif %}{{SITE_TITLE}}
-    </title>
-  </head>
+  {% include '_head.html' %}
   <body class="dark:bg-slate-800 dark:text-slate-100"> 
     <div class="flex flex-col h-screen">
       {% include '_header.html' %}

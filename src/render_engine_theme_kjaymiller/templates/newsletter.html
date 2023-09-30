@@ -5,14 +5,15 @@
 </article>
  {{ markup }}
 
+{% if theme.buttondown is defined %}
 <form
-	action="https://buttondown.email/api/emails/embed-subscribe/kjaymiller"
+	action="https://buttondown.email/api/emails/embed-subscribe/{{theme.buttondown}}"
 	method="post"
 	target="popupwindow"
-	onsubmit="window.open('https://buttondown.email/kjaymiller', 'popupwindow')"
+	onsubmit="window.open('https://buttondown.email/{{theme.buttondown}}', 'popupwindow')"
 	class="rounded border shadow-lg py-4 px-1 my-10">
 	
-  <div class="">
+  <div>
   <input type="email"
   class="rounded-lg w-96 border m-2 p-2"
 	name="email"
@@ -29,3 +30,5 @@
 	</div>
 
 </div>
+</form>
+{% endif %}

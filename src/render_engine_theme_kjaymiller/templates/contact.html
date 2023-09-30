@@ -7,6 +7,7 @@
     {% endif %}
 </div>
 
+{% if 'formspree' in theme %}
 <form class="p-2 border rounded-lg" method="POST" action="https://formspree.io/f/{{AUTHOR.email}}">
         <div class="m-2">
             <label class="font-bold" for="#name">Name</label>
@@ -26,9 +27,9 @@
     	</div>
 	<button class="w-48 border bg-slate-50 text-purple-800 p-2 rounded-lg hover:bg-purple-800 hover:text-slate-50" type="submit" >Send</button>
 </form>
-
-
-
+{% else %}
+You can email me at <a href="mailto:{{AUTHOR.email}}">{{AUTHOR.email}}</a>
+{% endif %}
 <section class="section">
 <div class="my-5 py-6 ">
 <div class="content">

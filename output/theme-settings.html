@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://fav.farm/👩🏾‍💻" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <!-- Pygments for code blocks -->
+    <link rel="stylesheet" href="/static/css/pygments.css" />
+    <script src="https://kit.fontawesome.com/94d9a219ee.js" crossorigin="anonymous"></script>
+    <title>
+        Theme Settings - Kjaymiller Render Engine Theme
+    </title>
+</head>  <body class="dark:bg-slate-800 dark:text-slate-100"> 
+    <div class="flex flex-col h-screen">
+
+<nav role="navigation"><div class="
+  bg-gradient-to-br
+  from-indigo-200
+  to-indigo-300
+  flex
+  flex-wrap
+  items-baseline
+  px-5
+  py-2
+  ">
+    <h1 class="title mx-3 text-xl font-bold text-gray-800">
+      <a class="no-underline" href="/">Kjaymiller Render Engine Theme</a>
+    </h1>
+    </div>
+    <div class="my-2 p-2 flex justify-center">
+      <a class="
+            p-3
+            mx-3
+            rounded-lg
+            hover:bg-gray-100
+            opacity-75
+            hover:opacity-100
+            hover:text-indigo-800
+            font-semibold
+            text-xl
+            hover:font-bold
+            dark:text-slate-200
+            text-slate-800
+            no-underline
+          " href="/docs.html"
+          aria-label="Docs">
+          Docs
+      </a>
+      <a class="
+            p-3
+            mx-3
+            rounded-lg
+            hover:bg-gray-100
+            opacity-75
+            hover:opacity-100
+            hover:text-indigo-800
+            font-semibold
+            text-xl
+            hover:font-bold
+            dark:text-slate-200
+            text-slate-800
+            no-underline
+          " href="https://github.com/kjaymiller/render_engine_kjaymiller_theme"
+          aria-label="">
+          <i class="fa-brands fa-github" aria-hidden="true" title=""></i>
+          
+      </a>
+  </div>
+</nav>      <main class="flex-grow mx-2 md:mx-auto container">
+<section>
+<div class="my-4">
+    <h1 class="text-4xl font-extrabold">Theme Settings</h1>
+</div>
+<article class="prose lg:prose-xl dark:prose-invert prose-slate">
+    <p>This theme supports embeds for many different tools.</p>
+
+<h2 id="site-settings">Site Settings</h2>
+
+<p>There are some values that are not in the settings that will be optionally used in the theme.</p>
+
+<h3 id="site_author">SITE_AUTHOR</h3>
+
+<p>The author is used in the footer and in the meta tags. Be sure that the Author format is correct.</p>
+
+<pre><code>SITE_AUTHOR = {
+    "name": "Jay Miller",
+    "email": "kjaymiller@gmail.com",
+}
+</code></pre>
+
+<h3 id="header_links">HEADER_LINKS</h3>
+
+<p>Header links are dictionary or class objeccts are used in the header. </p>
+
+<p>Here are valid parameters:</p>
+
+<ul>
+<li>text: (Required) The text that will be displayed in the header</li>
+<li>url: (Required) The url that the link will go to</li>
+<li>icon: (Optional) The fontawesome icon that will be used in the link</li>
+</ul>
+
+<p>Below is an example of a valid header link using the home icon.</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;HEADER_LINKS&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;fas fa-home&quot;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p><strong>NOTE</strong>
+  There is a setting specifically for showing social icons. See <a href="#social-optional">social</a> for more information.</p>
+</blockquote>
+
+<h2 id="adding-theme-settings">Adding theme settings</h2>
+
+<p>Here is an example settings for this theme:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="nt">&quot;theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;favicon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:fav.farm/☕&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fontawesome&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abcd1234&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;colors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;main1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purple-500&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;header_gradient_interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;social&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;youtube&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.youtube.com/kjaymiller&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;twitter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://twitter.com/kjaymiller&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;linkedin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://linkedin.com/in/kjaymiller&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;github&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/kjaymiller&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;mastodon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mastodon.social/@kjaymiller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="settings">Settings</h2>
+
+<p>In this theme all settings are optional.</p>
+
+<h3 id="colors">colors</h3>
+
+<h4 id="main1-default-gray-600">main1 (default: gray-600)</h4>
+
+<p>The primary color used in the site. This is present in the header and as some accents.</p>
+
+<p><em>This must be a valid tailwind color.</em></p>
+
+<p><code>purple-500</code> ✅
+<code>#9333ea</code> ❌
+<code>rgb(147 51 234)</code> ❌</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="err">Si</span><span class="kc">n</span><span class="err">ce</span><span class="w"> </span><span class="kc">t</span><span class="err">his</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="kc">ta</span><span class="err">ilwi</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">ca</span><span class="kc">n</span><span class="w"> </span><span class="err">modi</span><span class="kc">f</span><span class="err">y</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">css</span><span class="w"> </span><span class="err">color</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">modi</span><span class="kc">f</span><span class="err">yi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">ta</span><span class="err">ilwi</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">co</span><span class="kc">nf</span><span class="err">ig.</span>
+
+<span class="err">```js</span>
+<span class="c1">// tailwind.config.js</span>
+<span class="err">module.expor</span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kc">t</span><span class="err">heme</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">ex</span><span class="kc">ten</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">colors</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">&#39;mai</span><span class="kc">n</span><span class="mi">1</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;rgb(</span><span class="mi">147</span><span class="w"> </span><span class="mi">51</span><span class="w"> </span><span class="mi">234</span><span class="err">)&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="header_gradient_interval-default-100">header<em>gradient</em>interval (default: 100)</h4>
+
+<p>The strength of the gradient used in the header. This can be an increment of 100 between (+-)100 and (+-)800. you can also use in increment of (-)50 and (+)50 when trying to get to the 50 and 950 color values.</p>
+
+<h3 id="favicon-default-httpsfavfarm">favicon (default: <a href="https://fav.farm/👨🏾‍💻">https://fav.farm/👨🏾‍💻</a>)</h3>
+
+<p>This is a path/url to a favicon.</p>
+
+<h3 id="fontawesome-optional">fontawesome (optional)</h3>
+
+<p>This is a fontawesome key. You can get one from <a href="https://fontawesome.com/">fontawesome</a>.</p>
+
+<blockquote>
+  <p><strong>Warning</strong>
+  This is not required but if you do not provide one you will not be able to use any of the fontawesome icons in social.</p>
+</blockquote>
+
+<h3 id="social-optional">social (optional)</h3>
+
+<p>This is a dictionary of social links. You can use any of the following keys:</p>
+
+<ul>
+<li>youtube</li>
+<li>x_twitter</li>
+<li>linkedin</li>
+<li>github</li>
+<li>mastodon</li>
+</ul>
+
+<p>Social links not provided will not be shown.</p>
+
+</article>
+</section>
+      </main role="main">
+      <div>
+<hr class="mt-4 "/>
+<footer role="contentinfo" class="grid grid-cols-3 bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
+  <div id="footer-column-1" class= md:mx-auto text-small">
+    <p>http://localhost:8000/</p>
+    <p>Website Created with <a href="https://github.com/render-engine/render-engine">Render Engine</a> and <a
+                            class="hover:underline" href="https://github.com/kjaymiller/render_engine_theme_kjaymiller">kjaymiller theme</a>
+    
+    </div>
+    <div id="footer-column-2">
+    </div>
+    <div id="footer-column-3">
+
+
+<a class="rounded-xl no-underline opacity-50 p-1 hover:opacity-100" href="">
+    <i class="    text-slate-800
+ m-1 text-2xl fa-brands fa-x-twitter"></i>
+</a>
+<a class="rounded-xl opacity-50 no-underline p-1 hover:opacity-100" href="https://www.linkedin.com/in/kjaymiller/">
+    <i class="    text-blue-900
+ m-1 text-2xl fa-brands fa-linkedin"></i>
+</a>
+<a class="rounded-xl opacity-50 no-underline p-1 hover:opacity-100" href="https://github.com/kjaymiller/render_engine_kjaymiller_theme">
+    <i class="    text-slate-800
+ m-1 text-2xl fa-brands fa-github"></i>
+</a>
+<a class="rounded-xl opacity-50 no-underline p-1 hover:opacity-100" href="https://mastodon.social/@kjaymiller">
+    <i class="    text-indigo-400
+ m-1 text-2xl fa-brands fa-mastodon"></i>
+</a>
+  </div>
+</footer>      </div>
+    </div>
+  </body>
+
+</html>

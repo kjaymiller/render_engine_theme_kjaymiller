@@ -1,16 +1,18 @@
-{% set COLOR_MAIN_1 = theme.colors.main1 or "gray-600" %}
+{% set COLOR_MAIN = theme.get('colors', {"main":"gray-600"}).main %}
 
 <nav role="navigation"><div class="
-  bg-gradient-to-br    
-from-{{COLOR_MAIN_1}}
-{{COLOR_MAIN_1 | theme_gradient_to(100) }}
+  bg-gradient-to-br
+  from-{{COLOR_MAIN}}
+  {{COLOR_MAIN | theme_gradient_to(header_gradient_inverval or 100) }}
   flex
   flex-wrap
   items-baseline
   px-5
   py-2
   ">
-    <h1 class="title mx-3 text-5xl font-bold text-gray-200">
+  {% set TITLE_SIZE = theme.get('title_size', 'large') %}
+  {% set sizes = {"large": "5xl", "medium": "3xl", "small": "xl"} %}
+    <h1 class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold text-gray-800">
       <a class="no-underline" href="/">{{SITE_TITLE}}</a>
     </h1>
     </div>
@@ -30,8 +32,12 @@ from-{{COLOR_MAIN_1}}
             dark:text-slate-200
             text-slate-800
             no-underline
-          " href="{{link.url}}">
-        {{link.text}}
+          " href="{{link.url}}"
+          aria-label="{{link.text}}">
+          {% if link.icon is defined %}
+          <i class="{{link.icon}}" aria-hidden="true" title="{{link.text}}"></i>
+          {% endif %}
+          {{link.text}}
       </a>
       {% endfor %}
   </div>
