@@ -1,9 +1,9 @@
-{% set COLOR_MAIN_1 = theme.get('colors', {"main1":"gray-600"}).main1 %}
+{% set COLOR_MAIN = theme.get('colors', {"main":"gray-600"}) %}
 
 <nav role="navigation"><div class="
   bg-gradient-to-br    
-from-{{COLOR_MAIN_1}}
-{{COLOR_MAIN_1 | theme_gradient_to(header_gradient_inverval or 100) }}
+  from-{{COLOR_MAIN}}
+{{COLOR_MAIN | theme_gradient_to(header_gradient_inverval or 100) }}
   flex
   flex-wrap
   items-baseline

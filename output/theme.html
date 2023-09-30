@@ -2,60 +2,69 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <link rel="icon" href="https://fav.farm/👩🏾‍💻" />
+    <link rel="icon" href="https://fav.farm/📓" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <script src="https://kit.fontawesome.com/94d9a219ee.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/static/css/article.css" />    <title>
       Theme - Kjaymiller Render Engine Theme
     </title>
   </head>
   <body class="dark:bg-slate-800 dark:text-slate-100"> 
     <div class="flex flex-col h-screen">
-
-<nav role="navigation"><div class="
+<div class="
   bg-gradient-to-br    
-from-gray-600
-to-gray-700
+from-purple-600
+to-indigo-800
   flex
   flex-wrap
   items-baseline
   px-5
   py-2
   ">
-    <h1 class="title mx-3 text-5xl font-bold text-gray-200">
+    <h1 class="title mx-3 text-2xl font-bold text-gray-200">
       <a class="no-underline" href="/">Kjaymiller Render Engine Theme</a>
     </h1>
-    </div>
-    <div class="my-2 p-2 flex justify-center">
+    <div class="hidden md:block p-2">
   </div>
-</nav>      <main class="flex-grow mx-2 md:mx-auto container">
+<a class="p-1" href="https://www.youtube.com/channel/UCjoJU65IbXkKXsNqydro05Q/">
+    <i class="text-red-700 text-2xl m-1 fa-brands fa-youtube"></i>
+</a>
+<a class="rounded-xl opacity-50 p-1 hover:opacity-100" href="https://twitter.com/kjaymiller">
+    <i class=" text-blue-500 m-1 text-2xl fa-brands fa-twitter-square"></i>
+</a>
+<a class="rounded-xl opacity-50  p-1 hover:opacity-100" href="https://linkedin.com/in/kjaymiller">
+    <i class=" text-blue-900 m-1 text-2xl fa-brands fa-linkedin"></i>
+</a></div>      <div class="flex-grow mx-2 md:mx-auto container">
 <section>
 <div class="my-4">
     <h1 class="text-4xl font-extrabold">Theme</h1>
 </div>
-<article class="prose lg:prose-xl dark:prose-invert prose-slate">
+<article class="prose">
     <p>The theme is built on Tailwind CSS with support from fontawesome.</p>
 
 <h2>Install theme</h2>
 
 <p>You can install the theme via pip.</p>
 
-<p><code>shell
-python -m pip install kjaymiller-render-engine-theme
-</code></p>
+<div class="codehilite">
+<pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>kjaymiller-render-engine-theme
+</code></pre>
+</div>
 
 <h2>Register theme</h2>
 
 <p>This theme is installed through the site's <code>register_themes</code> method.</p>
 
-<p>```python
-from render<em>engine import Site
-from kjaymiller</em>render<em>engine</em>theme import kjaymiller</p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">from</span> <span class="nn">render_engine</span> <span class="kn">import</span> <span class="n">Site</span>
+<span class="kn">from</span> <span class="nn">kjaymiller_render_engine_theme</span> <span class="kn">import</span> <span class="n">kjaymiller</span>
 
-<p>app = Site()
-app.register_themes(kjaymiller)
-```</p>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Site</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">register_themes</span><span class="p">(</span><span class="n">kjaymiller</span><span class="p">)</span>
+</code></pre>
+</div>
 
 <h2>Theme Filters</h2>
 
@@ -63,19 +72,26 @@ app.register_themes(kjaymiller)
 
 </article>
 </section>
-      </main role="main">
+      </div>
       <div>
 <hr />
-<footer role="contentinfo" class="grid grid-cols-3 bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
-  <div id="footer-column-1" class= md:mx-auto text-small">
-    <p>http://localhost:8000/</p>
-    <p>Website Created with <a href="https://github.com/render-engine/render-engine">Render Engine</a> and <a
-                            class="hover:underline" href="https://github.com/kjaymiller/render_engine_theme_kjaymiller">kjaymiller theme</a>
+<footer class="bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
+  <div class="lg:flex md:mx-auto h-full justify-around items-center">
+    <p> kjaymiller.com</p>
+    <p>Website made with <a
+                            class="hover:underline" href="https://github.com/kjaymiller/render_engine">Render Engine</a> and <a href="https://tailwindcss.com">TailwindCSS</a>
     
-    </div>
-    <div id="footer-column-2">
-    </div>
-    <div>
+    hosted on Azure Static Web Apps                        <div>
+      <a class="hover:underline" href="/blog.rss"><span class="icon"><i class="fas fa-rss"></i></a>
+<a class="p-1" href="https://www.youtube.com/channel/UCjoJU65IbXkKXsNqydro05Q/">
+    <i class="text-red-700 text-2xl m-1 fa-brands fa-youtube"></i>
+</a>
+<a class="rounded-xl opacity-50 p-1 hover:opacity-100" href="https://twitter.com/kjaymiller">
+    <i class=" text-blue-500 m-1 text-2xl fa-brands fa-twitter-square"></i>
+</a>
+<a class="rounded-xl opacity-50  p-1 hover:opacity-100" href="https://linkedin.com/in/kjaymiller">
+    <i class=" text-blue-900 m-1 text-2xl fa-brands fa-linkedin"></i>
+</a>    </div>
   </div>
 </footer>      </div>
     </div>

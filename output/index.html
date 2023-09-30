@@ -2,42 +2,49 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <link rel="icon" href="https://fav.farm/👩🏾‍💻" />
+    <link rel="icon" href="https://fav.farm/📓" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <script src="https://kit.fontawesome.com/94d9a219ee.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/static/css/article.css" />    <title>
        - Kjaymiller Render Engine Theme
     </title>
   </head>
   <body class="dark:bg-slate-800 dark:text-slate-100"> 
     <div class="flex flex-col h-screen">
-
-<nav role="navigation"><div class="
+<div class="
   bg-gradient-to-br    
-from-gray-600
-to-gray-700
+from-purple-600
+to-indigo-800
   flex
   flex-wrap
   items-baseline
   px-5
   py-2
   ">
-    <h1 class="title mx-3 text-5xl font-bold text-gray-200">
+    <h1 class="title mx-3 text-2xl font-bold text-gray-200">
       <a class="no-underline" href="/">Kjaymiller Render Engine Theme</a>
     </h1>
-    </div>
-    <div class="my-2 p-2 flex justify-center">
+    <div class="hidden md:block p-2">
   </div>
-</nav>      <main class="flex-grow mx-2 md:mx-auto container">
+<a class="p-1" href="https://www.youtube.com/channel/UCjoJU65IbXkKXsNqydro05Q/">
+    <i class="text-red-700 text-2xl m-1 fa-brands fa-youtube"></i>
+</a>
+<a class="rounded-xl opacity-50 p-1 hover:opacity-100" href="https://twitter.com/kjaymiller">
+    <i class=" text-blue-500 m-1 text-2xl fa-brands fa-twitter-square"></i>
+</a>
+<a class="rounded-xl opacity-50  p-1 hover:opacity-100" href="https://linkedin.com/in/kjaymiller">
+    <i class=" text-blue-900 m-1 text-2xl fa-brands fa-linkedin"></i>
+</a></div>      <div class="flex-grow mx-2 md:mx-auto container">
 <section>
 <div class="my-4">
     <h1 class="text-4xl font-extrabold"></h1>
 </div>
-<article class="prose lg:prose-xl dark:prose-invert prose-slate">
+<article class="prose">
     <h1>KJayMiller Render Engine Theme</h1>
 
-<p><a href="https://actions-badge.atrox.dev/kjaymiller/render_engine_theme_kjaymiller/goto?ref=main"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fkjaymiller%2Frender_engine_theme_kjaymiller%2Fbadge%3Fref%3Dmain&amp;style=flat-square" alt="Github Build Status" /></a></p>
+<p><a href="https://actions-badge.atrox.dev/kjaymiller/render_engine_theme_kjaymiller/goto?ref=main"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fkjaymiller%2Frender_engine_theme_kjaymiller%2Fbadge%3Fref%3Dmain&style=flat-square" alt="Github Build Status" /></a></p>
 
 <p>This is a theme based on the early development of render-engine for kjaymiller.com.</p>
 
@@ -46,34 +53,42 @@ to-gray-700
 <h2>Quickstart</h2>
 
 <ol>
-<li><p>Install this theme through pip:</p>
+<li>Install this theme through pip:</li>
+</ol>
 
-<p><code>bash
-pip install kjaymiller-render-engine-theme
-</code></p></li>
-<li><p>Import and register your theme:</p>
+<div class="codehilite">
+<pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>kjaymiller-render-engine-theme
+</code></pre>
+</div>
 
-<pre><code>```python
-from render_engine import Site
-from kjaymiller_render_engine_theme import theme
+<ol start="2">
+<li>Import and register your theme:</li>
+</ol>
 
-app = Site()
-app.register_themes(theme)
-```
-</code></pre></li>
-<li><p>Add configuration file</p></li>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">from</span> <span class="nn">render_engine</span> <span class="kn">import</span> <span class="n">Site</span>
+<span class="kn">from</span> <span class="nn">kjaymiller_render_engine_theme</span> <span class="kn">import</span> <span class="n">theme</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Site</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">register_themes</span><span class="p">(</span><span class="n">theme</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<ol start="3">
+<li>Add configuration file</li>
 </ol>
 
 <p>This theme supports styling through <a href="https://tailwindcss.com/">TailwindCSS</a>. To add your own configuration, create a <code>tailwind.config.js</code> file in your project root and add your configuration there. You will need the following information in your config:</p>
 
-<p><code>js
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['output/**/*.{html, js}'],
-  plugins: [require('@tailwindcss/typography')]
-}
-</code></p>
+<div class="codehilite">
+<pre><span></span><code><span class="c1">// tailwind.config.js</span>
+<span class="cm">/** @type {import(&#39;tailwindcss&#39;).Config} */</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;output/**/*.{html, js}&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@tailwindcss/typography&#39;</span><span class="p">)]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <ol start="4">
 <li>Add your theme settings</li>
@@ -81,31 +96,31 @@ module.exports = {
 
 <p>This theme supports embeds for many different tools as well as configurations for your tailwindcss settings. Here is a basic example of what your site's theme settings might look like:</p>
 
-<p>```python</p>
-
-<p>settings = {
-    ... # settings for other plugins and your site
-    "theme" : {
-        "colors": {
-          "main1": "rose-800", # You can use any valid tailwindcss color here
-        }
-        "favicon": "https:fav.farm/☕", # url to your favicon
-        "fontawesome": "12345abcde", # fontawesome license key
-        "buttondown": "kjaymiller", # newsletter id for embed
-        "colors": {
-            "main1": "purple-500",
-            "header<em>gradient</em>interval": 100,
-        },
-        "social": {
-            "youtube": "https://www.youtube.com/kjaymiller",
-            "twitter": "https://twitter.com/kjaymiller",
-            "linkedin": "https://linkedin.com/in/kjaymiller",
-            "github": "https://github.com/kjaymiller",
-            "mastodon": "https://mastodon.social/@kjaymiller",
-        },
-    }
-}
-```</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span> <span class="c1"># settings for other plugins and your site</span>
+    <span class="s2">&quot;theme&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;colors&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;main1&quot;</span><span class="p">:</span> <span class="s2">&quot;rose-800&quot;</span><span class="p">,</span> <span class="c1"># You can use any valid tailwindcss color here</span>
+        <span class="p">}</span>
+        <span class="s2">&quot;favicon&quot;</span><span class="p">:</span> <span class="s2">&quot;https:fav.farm/☕&quot;</span><span class="p">,</span> <span class="c1"># url to your favicon</span>
+        <span class="s2">&quot;fontawesome&quot;</span><span class="p">:</span> <span class="s2">&quot;12345abcde&quot;</span><span class="p">,</span> <span class="c1"># fontawesome license key</span>
+        <span class="s2">&quot;buttondown&quot;</span><span class="p">:</span> <span class="s2">&quot;kjaymiller&quot;</span><span class="p">,</span> <span class="c1"># newsletter id for embed</span>
+        <span class="s2">&quot;colors&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;main1&quot;</span><span class="p">:</span> <span class="s2">&quot;purple-500&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;header_gradient_interval&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;social&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;youtube&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.youtube.com/kjaymiller&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;twitter&quot;</span><span class="p">:</span> <span class="s2">&quot;https://twitter.com/kjaymiller&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;linkedin&quot;</span><span class="p">:</span> <span class="s2">&quot;https://linkedin.com/in/kjaymiller&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/kjaymiller&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mastodon&quot;</span><span class="p">:</span> <span class="s2">&quot;https://mastodon.social/@kjaymiller&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <ol start="5">
 <li>Build your site</li>
@@ -113,19 +128,26 @@ module.exports = {
 
 </article>
 </section>
-      </main role="main">
+      </div>
       <div>
 <hr />
-<footer role="contentinfo" class="grid grid-cols-3 bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
-  <div id="footer-column-1" class= md:mx-auto text-small">
-    <p>http://localhost:8000/</p>
-    <p>Website Created with <a href="https://github.com/render-engine/render-engine">Render Engine</a> and <a
-                            class="hover:underline" href="https://github.com/kjaymiller/render_engine_theme_kjaymiller">kjaymiller theme</a>
+<footer class="bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
+  <div class="lg:flex md:mx-auto h-full justify-around items-center">
+    <p> kjaymiller.com</p>
+    <p>Website made with <a
+                            class="hover:underline" href="https://github.com/kjaymiller/render_engine">Render Engine</a> and <a href="https://tailwindcss.com">TailwindCSS</a>
     
-    </div>
-    <div id="footer-column-2">
-    </div>
-    <div>
+    hosted on Azure Static Web Apps                        <div>
+      <a class="hover:underline" href="/blog.rss"><span class="icon"><i class="fas fa-rss"></i></a>
+<a class="p-1" href="https://www.youtube.com/channel/UCjoJU65IbXkKXsNqydro05Q/">
+    <i class="text-red-700 text-2xl m-1 fa-brands fa-youtube"></i>
+</a>
+<a class="rounded-xl opacity-50 p-1 hover:opacity-100" href="https://twitter.com/kjaymiller">
+    <i class=" text-blue-500 m-1 text-2xl fa-brands fa-twitter-square"></i>
+</a>
+<a class="rounded-xl opacity-50  p-1 hover:opacity-100" href="https://linkedin.com/in/kjaymiller">
+    <i class=" text-blue-900 m-1 text-2xl fa-brands fa-linkedin"></i>
+</a>    </div>
   </div>
 </footer>      </div>
     </div>

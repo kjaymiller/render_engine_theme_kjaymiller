@@ -10,19 +10,19 @@ It relies on Tailwind CSS with support for icons via fontawesome and embeds for 
 
 1. Install this theme through pip:
 
-    ```bash
-    pip install kjaymiller-render-engine-theme
-    ```
+```bash
+pip install kjaymiller-render-engine-theme
+```
 
 2. Import and register your theme:
 
-        ```python
-        from render_engine import Site
-        from kjaymiller_render_engine_theme import theme
-    
-        app = Site()
-        app.register_themes(theme)
-        ```
+```python
+from render_engine import Site
+from kjaymiller_render_engine_theme import theme
+
+app = Site()
+app.register_themes(theme)
+```
 
 3. Add configuration file
 
@@ -65,6 +65,7 @@ settings = {
         },
     }
 }
+
 ```
 
 5. Build your site
