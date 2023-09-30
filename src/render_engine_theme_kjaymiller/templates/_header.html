@@ -1,4 +1,4 @@
-{% set COLOR_MAIN_1 = theme.colors.main1 or "gray-600" %}
+{% set COLOR_MAIN_1 = theme.get('colors', {"main1":"gray-600"}).main1 %}
 
 <nav role="navigation"><div class="
   bg-gradient-to-br    

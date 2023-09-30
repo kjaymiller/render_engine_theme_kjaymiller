@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="icon" href="https://fav.farm/👩🏾‍💻" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+<link rel="stylesheet" href="/static/css/article.css" />    <title>
+       - Kjaymiller Render Engine Theme
+    </title>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-100"> 
+    <div class="flex flex-col h-screen">
+
+<nav role="navigation"><div class="
+  bg-gradient-to-br    
+from-gray-600
+to-gray-700
+  flex
+  flex-wrap
+  items-baseline
+  px-5
+  py-2
+  ">
+    <h1 class="title mx-3 text-5xl font-bold text-gray-200">
+      <a class="no-underline" href="/">Kjaymiller Render Engine Theme</a>
+    </h1>
+    </div>
+    <div class="my-2 p-2 flex justify-center">
+  </div>
+</nav>      <main class="flex-grow mx-2 md:mx-auto container">
+<section>
+<div class="my-4">
+    <h1 class="text-4xl font-extrabold"></h1>
+</div>
+<article class="prose lg:prose-xl dark:prose-invert prose-slate">
+    <h1>KJayMiller Render Engine Theme</h1>
+
+<p><a href="https://actions-badge.atrox.dev/kjaymiller/render_engine_theme_kjaymiller/goto?ref=main"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fkjaymiller%2Frender_engine_theme_kjaymiller%2Fbadge%3Fref%3Dmain&amp;style=flat-square" alt="Github Build Status" /></a></p>
+
+<p>This is a theme based on the early development of render-engine for kjaymiller.com.</p>
+
+<p>It relies on Tailwind CSS with support for icons via fontawesome and embeds for analytics, and newsletters.</p>
+
+<h2>Quickstart</h2>
+
+<ol>
+<li><p>Install this theme through pip:</p>
+
+<p><code>bash
+pip install kjaymiller-render-engine-theme
+</code></p></li>
+<li><p>Import and register your theme:</p>
+
+<pre><code>```python
+from render_engine import Site
+from kjaymiller_render_engine_theme import theme
+
+app = Site()
+app.register_themes(theme)
+```
+</code></pre></li>
+<li><p>Add configuration file</p></li>
+</ol>
+
+<p>This theme supports styling through <a href="https://tailwindcss.com/">TailwindCSS</a>. To add your own configuration, create a <code>tailwind.config.js</code> file in your project root and add your configuration there. You will need the following information in your config:</p>
+
+<p><code>js
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['output/**/*.{html, js}'],
+  plugins: [require('@tailwindcss/typography')]
+}
+</code></p>
+
+<ol start="4">
+<li>Add your theme settings</li>
+</ol>
+
+<p>This theme supports embeds for many different tools as well as configurations for your tailwindcss settings. Here is a basic example of what your site's theme settings might look like:</p>
+
+<p>```python</p>
+
+<p>settings = {
+    ... # settings for other plugins and your site
+    "theme" : {
+        "colors": {
+          "main1": "rose-800", # You can use any valid tailwindcss color here
+        }
+        "favicon": "https:fav.farm/☕", # url to your favicon
+        "fontawesome": "12345abcde", # fontawesome license key
+        "buttondown": "kjaymiller", # newsletter id for embed
+        "colors": {
+            "main1": "purple-500",
+            "header<em>gradient</em>interval": 100,
+        },
+        "social": {
+            "youtube": "https://www.youtube.com/kjaymiller",
+            "twitter": "https://twitter.com/kjaymiller",
+            "linkedin": "https://linkedin.com/in/kjaymiller",
+            "github": "https://github.com/kjaymiller",
+            "mastodon": "https://mastodon.social/@kjaymiller",
+        },
+    }
+}
+```</p>
+
+<ol start="5">
+<li>Build your site</li>
+</ol>
+
+</article>
+</section>
+      </main role="main">
+      <div>
+<hr />
+<footer role="contentinfo" class="grid grid-cols-3 bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
+  <div id="footer-column-1" class= md:mx-auto text-small">
+    <p>http://localhost:8000/</p>
+    <p>Website Created with <a href="https://github.com/render-engine/render-engine">Render Engine</a> and <a
+                            class="hover:underline" href="https://github.com/kjaymiller/render_engine_theme_kjaymiller">kjaymiller theme</a>
+    
+    </div>
+    <div id="footer-column-2">
+    </div>
+    <div>
+  </div>
+</footer>      </div>
+    </div>
+  </body>
+
+</html>

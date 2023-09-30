@@ -15,14 +15,15 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "axe-playwright-python",
+    "black",
+    "playwright",
     "pytest",
     "pytest-mock",
     "pytest-cov",
     "pytest-playwright",
-    "axe-playwright-python",
-    "playwright",
+    "render-engine>=2023.9.1b1",
     "ruff",
-    "black",
     ]
 
 [tool.setuptools_scm]
