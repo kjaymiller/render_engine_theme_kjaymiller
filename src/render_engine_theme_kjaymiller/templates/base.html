@@ -5,8 +5,10 @@
     {% include '_analytics.html' %}
     {% endif %}
     <!-- Required meta tags -->
-    {% if theme.favicon is defined %}
-    <link rel="icon" href="{{favicon or 'https://fav.farm/::👩🏾‍💻}}'" />
+    {% if favicon in theme %}
+    <link rel="icon" href="{{theme.favicon}}" />
+    {% else %}
+    <link rel="icon" href="https://fav.farm/👩🏾‍💻" />
     {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
