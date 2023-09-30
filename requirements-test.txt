@@ -22,7 +22,7 @@ dtyper==2.1.0
     # via render-engine
 gitdb==4.0.10
     # via gitpython
-gitpython==3.1.36
+gitpython==3.1.37
     # via render-engine
 greenlet==2.0.2
     # via playwright
