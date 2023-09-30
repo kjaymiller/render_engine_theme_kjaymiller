@@ -12,20 +12,41 @@ app.site_vars.update ({
         "name": "kjaymiller",
         "email": "kjaymiller@gmail.com",
     },
+    "HEADER_LINKS": [
+        {
+            "text": "Docs",
+            "url": "/docs.html",
+        },
+        {
+            "test": "GitHub",
+            "url": "https://github.com/kjaymiller/render_engine_kjaymiller_theme",
+            "icon": "fa-brands fa-github",
+        }    
+    ],
     "theme": {
+        "title_size": "small",
         "colors": {
-            "main": "indigo-200"
-        }
+            "main": "indigo-200",
+        },
+        "social": {
+            "github": "https://github.com/kjaymiller/render_engine_kjaymiller_theme",
+            "x-twitter": "https://twitter.com/kjaymiller",
+            "linkedin": "https://www.linkedin.com/in/kjaymiller/",
+            "mastodon": "https://mastodon.social/@kjaymiller",
+        },
+        "fontawesome": "94d9a219ee"
     }
 })
 app.register_themes(kjaymiller)
 
 @app.collection
-class Pages(Collection):
+class Docs(Collection):
     content_path = 'docs/pages'
     template = "page.html"
     Parser = MarkdownPageParser
-    parser_extras = {"markdown_extras": ["fenced-code-blocks", "codehilite"]}
+    parser_extras = {"markdown_extras": ["fenced-code-blocks", "codehilite", "header-ids"]}
+    has_archive = True
+    archive_template = "blog_list.html"
 
 @app.page
 class Index(Page):

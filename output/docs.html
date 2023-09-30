@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/static/css/pygments.css" />
     <script src="https://kit.fontawesome.com/94d9a219ee.js" crossorigin="anonymous"></script>
     <title>
-        Theme - Kjaymiller Render Engine Theme
+        Docs - Kjaymiller Render Engine Theme
     </title>
 </head>  <body class="dark:bg-slate-800 dark:text-slate-100"> 
     <div class="flex flex-col h-screen">
@@ -70,41 +70,29 @@
       </a>
   </div>
 </nav>      <main class="flex-grow mx-2 md:mx-auto container">
-<section>
-<div class="my-4">
-    <h1 class="text-4xl font-extrabold">Theme</h1>
-</div>
-<article class="prose lg:prose-xl dark:prose-invert prose-slate">
-    <p>The theme is built on Tailwind CSS with support from fontawesome.</p>
+<h2 class="mt-8 title text-2xl font-semibold">Docs</h2>
+<div class="">
+    <div class="container mx-auto">
+  <article class="flex p-3 my-5 items-center shadow">
+        <div class="col-span-5">
 
-<h2 id="install-theme">Install theme</h2>
+          <h2 class="text-2xl font-light">
+            <a href="/theme.html">Theme</a>
+          </h2>
+          <div class="flex">
+          </div>
+  </article>
+  <article class="flex p-3 my-5 items-center shadow">
+        <div class="col-span-5">
 
-<p>You can install the theme via pip.</p>
-
-<div class="codehilite">
-<pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>kjaymiller-render-engine-theme
-</code></pre>
-</div>
-
-<h2 id="register-theme">Register theme</h2>
-
-<p>This theme is installed through the site's <code>register_themes</code> method.</p>
-
-<div class="codehilite">
-<pre><span></span><code><span class="kn">from</span> <span class="nn">render_engine</span> <span class="kn">import</span> <span class="n">Site</span>
-<span class="kn">from</span> <span class="nn">kjaymiller_render_engine_theme</span> <span class="kn">import</span> <span class="n">kjaymiller</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">Site</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">register_themes</span><span class="p">(</span><span class="n">kjaymiller</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h2 id="theme-filters">Theme Filters</h2>
-
-<p>This theme does add some filters but they are for building the site and not intended for use by the user.</p>
-
-</article>
-</section>
+          <h2 class="text-2xl font-light">
+            <a href="/theme-settings.html">Theme Settings</a>
+          </h2>
+          <div class="flex">
+          </div>
+  </article>
+    </div>
+  </div>
       </main role="main">
       <div>
 <hr class="mt-4 "/>

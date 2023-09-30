@@ -6,28 +6,33 @@
 {% endif %}
 {% endmacro %}
 
-{% if theme.social.youtube %}
+{% if theme.social %}
+
+{% if 'youtube' in theme.social %}
 <a class="p-1 no-underline" href="{{theme.social.youtube}}">
     <i class="{{social_icon_color('text-red-700')}} text-2xl m-1 fa-brands fa-youtube"></i>
 </a>
 {% endif %}
-{% if theme.social.twitter %}
+{% if 'x-twitter' in theme.social %}
 <a class="rounded-xl no-underline opacity-50 p-1 hover:opacity-100" href="{{theme.social.twitter}}">
     <i class="{{social_icon_color('text-slate-800')}} m-1 text-2xl fa-brands fa-x-twitter"></i>
 </a>
 {% endif %}
-{% if theme.social.linkedin %}
+{% if 'linkedin' in theme.social %}
 <a class="rounded-xl opacity-50 no-underline p-1 hover:opacity-100" href="{{theme.social.linkedin}}">
     <i class="{{social_icon_color('text-blue-900')}} m-1 text-2xl fa-brands fa-linkedin"></i>
 </a>
 {% endif %}
-{% if theme.social.github %}
+{% if 'github' in theme.social %}
 <a class="rounded-xl opacity-50 no-underline p-1 hover:opacity-100" href="{{theme.social.github}}">
     <i class="{{social_icon_color('text-slate-800')}} m-1 text-2xl fa-brands fa-github"></i>
 </a>
 {% endif %}
-{% if theme.social.mastodon %}
+{% if 'mastodon' in theme.social %}
 <a class="rounded-xl opacity-50 no-underline p-1 hover:opacity-100" href="{{theme.social.mastodon}}">
     <i class="{{social_icon_color('text-indigo-400')}} m-1 text-2xl fa-brands fa-mastodon"></i>
 </a>
+{% endif %}
+{% else %}
+NO SOCIAL
 {% endif %}

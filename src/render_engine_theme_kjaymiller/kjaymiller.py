@@ -4,6 +4,7 @@ import pathlib
 
 from jinja2 import PackageLoader
 from render_engine.utils.themes import Theme
+from render_engine_tailwindcss import TailwindCSS
 
 
 VALID_TAILWINDCSS_COLOR_RANGE = (
@@ -84,10 +85,10 @@ def get_theme_gradient_to(base_value:str, increment_value:int) -> str:
         color.value = 950
     return f"to-{str(color)}"
 
-
 kjaymiller = Theme(
     loader=PackageLoader("render_engine_theme_kjaymiller", "templates"),
     static_dir= pathlib.Path(__file__).parent / "static",
+    plugins = [TailwindCSS],
     filters = {
         "theme_gradient_to": get_theme_gradient_to,
         "theme_color_value": get_color_string_value,

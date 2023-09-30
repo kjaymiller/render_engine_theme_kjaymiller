@@ -19,6 +19,32 @@ SITE_AUTHOR = {
 }
 ```
 
+### HEADER_LINKS
+
+Header links are dictionary or class objeccts are used in the header. 
+
+Here are valid parameters:
+
+- text: (Required) The text that will be displayed in the header
+- url: (Required) The url that the link will go to
+- icon: (Optional) The fontawesome icon that will be used in the link
+
+Below is an example of a valid header link using the home icon.
+
+```python
+{
+  "HEADER_LINKS": {
+    "text": "Home",
+    "url": "/",
+    "icon": "fas fa-home",
+  },
+}
+
+```
+
+> **NOTE**
+> There is a setting specifically for showing social icons. See [social](#social-optional) for more information.
+
 ## Adding theme settings
 
 Here is an example settings for this theme:
