@@ -9,6 +9,7 @@ from multiprocessing import Process
 @pytest.fixture(scope="session")
 def site():
     test_site = Site()
+    test_site.site_vars.update ({"theme": {}})
     test_site.output_path = 'tests/output'
     test_site.register_themes(theme)
 
