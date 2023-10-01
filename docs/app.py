@@ -9,7 +9,7 @@ app = Site()
 app.output_path = "docs/output"
 app.site_vars.update ({
     "SITE_TITLE": "Kjaymiller Render Engine Theme",
-    "SITE_URL": "https://kjaymiller.github.io/render_engine_kjaymiller_theme/",
+    "SITE_URL": "https://kjaymiller.github.io/render_engine_theme_kjaymiller/",
     "SITE_AUTHOR": {
         "name": "kjaymiller",
         "email": "kjaymiller@gmail.com",
