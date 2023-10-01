@@ -40,7 +40,7 @@ jobs:
           path: './docs/output'
       - name: move static
         run: |
-          mv ./docs/static /
+          mv docs/static /
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
