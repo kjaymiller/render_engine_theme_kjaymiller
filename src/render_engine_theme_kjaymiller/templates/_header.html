@@ -32,7 +32,7 @@
             dark:text-slate-200
             text-slate-800
             no-underline
-          " href="{{link.url|to_absolute}}"
+          " href="{{SITE_URL}}{{link.url}}"
           aria-label="{{link.text}}">
           {% if link.icon is defined %}
           <i class="{{link.icon}}" aria-hidden="true" title="{{link.text}}"></i>
