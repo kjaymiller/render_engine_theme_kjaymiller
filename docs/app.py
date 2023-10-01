@@ -6,6 +6,7 @@ from render_engine.site import Site
 from render_engine_theme_kjaymiller import kjaymiller
 
 app = Site()
+app.output_path = "docs/output"
 app.site_vars.update ({
     "SITE_TITLE": "Kjaymiller Render Engine Theme",
     "SITE_AUTHOR": {
