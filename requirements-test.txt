@@ -114,7 +114,7 @@ typer==0.9.0
     # via
     #   dtyper
     #   render-engine
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   pyee
     #   typer
