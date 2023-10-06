@@ -18,7 +18,7 @@ click==8.1.7
     #   typer
 coverage[toml]==7.3.2
     # via pytest-cov
-dtyper==2.1.0
+dtyper==2.4.0
     # via render-engine
 gitdb==4.0.10
     # via gitpython
