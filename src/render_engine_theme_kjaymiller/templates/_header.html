@@ -1,5 +1,4 @@
 {% set COLOR_MAIN = theme.get('colors', {"main":"gray-600"}).main %}
-
 <nav role="navigation"><div class="
   bg-gradient-to-br
   from-{{COLOR_MAIN}}
@@ -17,6 +16,11 @@
     </h1>
     </div>
     <div class="my-2 p-2 flex justify-center">
+    {% if language is defined and f'{language_code}_NAVIGATION' in globals %}
+      {% set HEADER_LINKS = globals[f'{language_code}_NAVIGATION'] %}
+    {% else %}
+      {% set HEADER_LINKS = NAVIGATION %}
+    {% endif % }
     {% for link in HEADER_LINKS %}
       <a class="
             p-3
