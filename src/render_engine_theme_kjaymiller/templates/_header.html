@@ -16,14 +16,8 @@
     </h1>
     </div>
     <div class="my-2 p-2 flex justify-center">
-    {% if language is defined %}
-      {% if language in NAVIGATION %}
-        {% set HEADER_LINKS = NAVIGATION[language] %}
-      {% endif %}
-    {% else %}
-      {% set HEADER_LINKS = NAVIGATION %}
-    {% endif % }
-    {% for link in HEADER_LINKS %}
+    
+    {% for link in NAVIGATION %}
       <a class="
             p-3
             mx-3
