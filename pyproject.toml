@@ -10,7 +10,8 @@ readme = "README.md"
 
 dependencies = [
     'jinja2',
-    'render-engine-tailwindcss==2023.7.1a2'
+    'render-engine-tailwindcss==2023.7.1a2',
+    "render-engine>=2023.10.1"
     ]
 
 [project.optional-dependencies]
@@ -22,7 +23,6 @@ dev = [
     "pytest-mock",
     "pytest-cov",
     "pytest-playwright",
-    "render-engine>=2023.9.1b1",
     "ruff",
     ]
 
@@ -33,9 +33,9 @@ local_scheme = "no-local-version"
 package-dir = {"" = "src"}
 
 [project.urls]
-homepage = "https://example.com"
+homepage = "https://kjaymiller.github.io/render_engine_theme_kjaymiller"
 repository = "https://github.com/kjaymiller/render-engine-theme-kjaymiller"
-documentation = "https://example.com/docs"
+documentation = "https://github.io/kjaymiller/render-engine-theme-kjaymille"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

@@ -1,5 +1,5 @@
-import re
 import pathlib
+import re
 
 from jinja2 import PackageLoader
 from render_engine.utils.themes import Theme

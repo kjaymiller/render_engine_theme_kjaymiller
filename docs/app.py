@@ -14,7 +14,7 @@ app.site_vars.update ({
         "name": "kjaymiller",
         "email": "kjaymiller@gmail.com",
     },
-    "HEADER_LINKS": [
+    "NAVIGATION": [
         {
             "text": "Docs",
             "url": "/docs.html",
