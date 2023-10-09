@@ -10,7 +10,8 @@ readme = "README.md"
 
 dependencies = [
     'jinja2',
-    'render-engine-tailwindcss==2023.7.1a2'
+    'render-engine-tailwindcss==2023.7.1a2',
+    "render-engine>=2023.10.1"
     ]
 
 [project.optional-dependencies]
@@ -22,7 +23,6 @@ dev = [
     "pytest-mock",
     "pytest-cov",
     "pytest-playwright",
-    "render-engine>=2023.10.1",
     "ruff",
     ]
 
