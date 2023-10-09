@@ -16,7 +16,7 @@
     </h1>
     </div>
     <div class="my-2 p-2 flex justify-center">
-    {% if language is defined and f'{language_code}_NAVIGATION' in globals %}
+    {% if language is defined %}
       {% set HEADER_LINKS = globals[f'{language_code}_NAVIGATION'] %}
     {% else %}
       {% set HEADER_LINKS = NAVIGATION %}
