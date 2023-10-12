@@ -11,7 +11,7 @@ It relies on Tailwind CSS with support for icons via fontawesome and embeds for 
 1. Install this theme through pip:
 
 ```bash
-pip install kjaymiller-render-engine-theme
+pip install render-engine-theme-kjaymiller
 ```
 
 2. Import and register your theme:
