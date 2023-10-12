@@ -39,13 +39,17 @@ module.exports = {
 
 4. Add your theme settings
 
-This theme supports embeds for many different tools as well as configurations for your tailwindcss settings. Here is a basic example of what your site's theme settings might look like:
+This theme supports embeds for many different tools as well as configurations for your tailwindcss settings in your `app.py` module. Here is a basic example of what your site's theme settings might look like:
 
 ```python
 
+app = Site()
+
 settings = {
+    "NAVIGATION": {...} ,
     ... # settings for other plugins and your site
     "theme" : {
+      ... # Your theme settings
         "colors": {
           "main1": "rose-800", # You can use any valid tailwindcss color here
         }
@@ -66,6 +70,12 @@ settings = {
     }
 }
 
+# Update your settings: prefer update to overwrite
+app.site_settings.update(theme)
+
 ```
 
 5. Build your site
+```bash
+python -m render_engine serve --build app:app
+```
