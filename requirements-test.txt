@@ -54,7 +54,7 @@ pathspec==0.11.2
     # via black
 platformdirs==3.11.0
     # via black
-playwright==1.38.0
+playwright==1.39.0
     # via
     #   axe-playwright-python
     #   pytest-playwright
