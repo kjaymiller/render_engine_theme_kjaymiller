@@ -2,15 +2,16 @@ from playwright.sync_api import sync_playwright
 from render_engine import Site, Page, Collection
 from render_engine.parsers.markdown import MarkdownPageParser
 import render_engine_theme_kjaymiller.kjaymiller as theme
+from render_engine.watcher.event import spawn_server
 import http.server
 import pytest
 from multiprocessing import Process
 
 @pytest.fixture(scope="session")
-def site():
+def site(tmp_path_factory):
     test_site = Site()
     test_site.site_vars.update ({"theme": {}})
-    test_site.output_path = 'tests/output'
+    test_site.output_path = tmp_path_factory.getbasetemp() / "output"
     test_site.register_themes(theme)
 
     @test_site.page
@@ -24,21 +25,15 @@ def site():
         PageParser = MarkdownPageParser
         template = "page.html" 
 
-    return test_site.render()
+    test_site.render()
+    return test_site
     
-def runserver():
-    class server(http.server.SimpleHTTPRequestHandler):
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, directory="output", **kwargs)
 
-    httpd = http.server.HTTPServer(('localhost', 8000), server)
-    httpd.serve_forever()
-
-
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="session")
 def live_server(site):
-    site
-    p = Process(target=runserver)
+    _server = spawn_server(('localhost', 8000), site.output_path)
+
+    p = Process(target=_server.serve_forever())
     p.start()
     yield
     p.kill()
