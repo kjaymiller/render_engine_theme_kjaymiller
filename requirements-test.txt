@@ -80,7 +80,7 @@ pytest-base-url==2.0.0
     # via pytest-playwright
 pytest-cov==4.1.0
     # via render-engine-theme-kjaymiller (pyproject.toml)
-pytest-mock==3.11.1
+pytest-mock==3.12.0
     # via render-engine-theme-kjaymiller (pyproject.toml)
 pytest-playwright==0.4.3
     # via render-engine-theme-kjaymiller (pyproject.toml)
