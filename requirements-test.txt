@@ -6,7 +6,7 @@
 #
 axe-playwright-python==0.1.4
     # via render-engine-theme-kjaymiller (pyproject.toml)
-black==23.10.0
+black==23.10.1
     # via render-engine-theme-kjaymiller (pyproject.toml)
 certifi==2023.7.22
     # via requests
