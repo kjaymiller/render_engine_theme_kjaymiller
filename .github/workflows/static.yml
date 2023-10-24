@@ -38,7 +38,7 @@ jobs:
       - name: Run Render Engine
         run: |
           pip install -r requirements.txt
-          pip install render-engine-theme-kjaymiller
+          pip install "render-engine-theme-kjaymiller==2023.10.2b2"
           render-engine build docs.app:app
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
