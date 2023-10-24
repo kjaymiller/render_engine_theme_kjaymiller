@@ -104,7 +104,7 @@ requests==2.31.0
     # via pytest-base-url
 rich==13.6.0
     # via render-engine
-ruff==0.1.1
+ruff==0.1.2
     # via render-engine-theme-kjaymiller (pyproject.toml)
 six==1.16.0
     # via python-dateutil
