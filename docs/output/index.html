@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="https://kjaymiller.github.io/render_engine_theme_kjaymiller/static/css/tailwind.css" />
+    <link rel="stylesheet" href="https://kjaymiller.github.io/render_engine_theme_kjaymiller//static/css/tailwind.css" />
     <!-- Pygments for code blocks -->
-    <link rel="stylesheet" href="https://kjaymiller.github.io/render_engine_theme_kjaymiller/static/css/pygments.css" />
+    <link rel="stylesheet" href="https://kjaymiller.github.io/render_engine_theme_kjaymiller//static/css/pygments.css" />
     <script src="https://kit.fontawesome.com/94d9a219ee.js" crossorigin="anonymous"></script>
     <title>
          - Kjaymiller Render Engine Theme
@@ -90,7 +90,7 @@
 </ol>
 
 <div class="codehilite">
-<pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>kjaymiller-render-engine-theme
+<pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>render-engine-theme-kjaymiller
 </code></pre>
 </div>
 
@@ -127,12 +127,16 @@
 <li>Add your theme settings</li>
 </ol>
 
-<p>This theme supports embeds for many different tools as well as configurations for your tailwindcss settings. Here is a basic example of what your site's theme settings might look like:</p>
+<p>This theme supports embeds for many different tools as well as configurations for your tailwindcss settings in your <code>app.py</code> module. Here is a basic example of what your site's theme settings might look like:</p>
 
 <div class="codehilite">
-<pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="p">{</span>
+<pre><span></span><code><span class="n">app</span> <span class="o">=</span> <span class="n">Site</span><span class="p">()</span>
+
+<span class="n">settings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;NAVIGATION&quot;</span><span class="p">:</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span> <span class="p">,</span>
     <span class="o">...</span> <span class="c1"># settings for other plugins and your site</span>
     <span class="s2">&quot;theme&quot;</span> <span class="p">:</span> <span class="p">{</span>
+      <span class="o">...</span> <span class="c1"># Your theme settings</span>
         <span class="s2">&quot;colors&quot;</span><span class="p">:</span> <span class="p">{</span>
           <span class="s2">&quot;main1&quot;</span><span class="p">:</span> <span class="s2">&quot;rose-800&quot;</span><span class="p">,</span> <span class="c1"># You can use any valid tailwindcss color here</span>
         <span class="p">}</span>
@@ -152,12 +156,20 @@
         <span class="p">},</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="c1"># Update your settings: prefer update to overwrite</span>
+<span class="n">app</span><span class="o">.</span><span class="n">site_settings</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">theme</span><span class="p">)</span>
 </code></pre>
 </div>
 
 <ol start="5">
 <li>Build your site</li>
 </ol>
+
+<div class="codehilite">
+<pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>render_engine<span class="w"> </span>serve<span class="w"> </span>--build<span class="w"> </span>app:app
+</code></pre>
+</div>
 
 </article>
 </section>
