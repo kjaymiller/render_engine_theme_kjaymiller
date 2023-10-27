@@ -18,10 +18,10 @@ pip install render-engine-theme-kjaymiller
 
 ```python
 from render_engine import Site
-from kjaymiller_render_engine_theme import theme
+from render_engine_theme_kjaymiller import kjaymiller
 
 app = Site()
-app.register_themes(theme)
+app.register_themes(kjaymiller)
 ```
 
 3. Add configuration file
@@ -54,8 +54,6 @@ settings = {
           "main1": "rose-800", # You can use any valid tailwindcss color here
         }
         "favicon": "https:fav.farm/☕", # url to your favicon
-        "fontawesome": "12345abcde", # fontawesome license key
-        "buttondown": "kjaymiller", # newsletter id for embed
         "colors": {
             "main1": "purple-500",
             "header_gradient_interval": 100,
