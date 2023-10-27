@@ -38,7 +38,7 @@
 {% endmacro %}
 
 
-{% macro fontawesome_social_cards %}
+{% macro fontawesome_social_cards() %}
 {% if 'youtube' in theme.social %}
 <a class="p-1 no-underline" href="{{theme.social.youtube}}">
     <i class="{{social_icon_color('text-red-700')}} text-2xl m-1 fa-brands fa-youtube"></i>
