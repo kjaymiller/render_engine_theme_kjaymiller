@@ -8,7 +8,7 @@
         {% block head %}
         {% for headers in head %}
           {% for header in headers %}
-            {{header}}
+            {% include header %}
           {% endfor %}
         {% endfor %}
         {% endblock %}

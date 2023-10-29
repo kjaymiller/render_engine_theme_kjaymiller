@@ -20,10 +20,7 @@ kjaymiller = Theme(
         "theme_color_value": get_color_string_value,
         },
     template_globals = {
-        "head": [
-            str(Stylesheet("{{SITE_URL}}/static/css/tailwind.css")),
-            str(Stylesheet("{{SITE_URL}}/static/css/pygments.css")),
-        ],
+        "head": ["kjaymiller_com/_head.html"],
         "body_class": "dark:bg-slate-800 dark:text-slate-100",
     },
 )
