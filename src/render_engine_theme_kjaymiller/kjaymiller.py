@@ -22,6 +22,6 @@ kjaymiller = Theme(
     template_globals = {
         "head": ["kjaymiller_com/_head.html"],
         "body_class": "dark:bg-slate-800 dark:text-slate-100",
-        "page_title_class": "text-3xl font-bold text-slate-900 dark:text-slate-100",
+        "page_title_class": "text-5xl font-bold text-slate-900 dark:text-slate-100",
     },
 )
