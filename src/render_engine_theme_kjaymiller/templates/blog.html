@@ -3,7 +3,6 @@
 {% block head %}
   <!-- Meta Card Tags-->
   {% include "_og_card.html" %}
-  
 {% endblock %}
 {% block content %} 
   <article class="prose lg:prose-xl dark:prose-invert prose-slate">
@@ -12,8 +11,9 @@
         <img src="{{image}}" class="max-h-72 rounded-lg shadow">
       </div>
     {% endif %}
+    {% set page_title_class = ["title"] %}
+    {% include 'components/page_title.html' %}  
     <div class="pt-1">
-      <h1 class="title">{{title}}</h1>
       {% if subtitle %}: {{subtitle}}{%endif%}
       <small class="column is-narrow">
       {{date | format_datetime}}
