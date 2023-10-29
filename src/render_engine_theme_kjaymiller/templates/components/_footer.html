@@ -1,4 +1,4 @@
-{% from "components/social-cards.html" import social_cards() with context %}
+{% from "components/social-cards.html" import social_cards with context %}
 <hr class="mt-4 "/>
 <footer role="contentinfo" class="grid grid-cols-3 bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4 h-24">
   <div id="footer-column-1" class= md:mx-auto text-small">
@@ -8,9 +8,9 @@
     
     </div>
     <div id="footer-column-2">
-      {% if theme.footer_column2 %}
+    {% if theme.footer_column2 %}
       {% include theme.footer_column2 %}
-      {% endif %}
+    {% endif %}
     </div>
     <div id="footer-column-3">
       {{social_cards()}}
