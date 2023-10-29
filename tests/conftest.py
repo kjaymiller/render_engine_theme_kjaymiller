@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright
-from render_engine import Site, Page, Collection
+from render_engine import Site, Page, Collection, Blog
 from render_engine.parsers.markdown import MarkdownPageParser
 import render_engine_theme_kjaymiller.kjaymiller as theme
 from render_engine.watcher.event import spawn_server
@@ -14,16 +14,27 @@ def site(tmp_path_factory):
     test_site.output_path = tmp_path_factory.getbasetemp() / "output"
     test_site.register_themes(theme)
 
+
+    test_blog_dir = tmp_path_factory.getbasetemp() / "blog"
+    test_blog_dir.mkdir()
+    test_blog_dir.joinpath("test_blog_post.md").write_text(
+        "---\ntitle: Test Blog Post\ndate: 2023-10-29 12:00:00+04:00\n---\n\nThis is a test blog post"
+    )
+
     @test_site.page
     class TestPage(Page):
         template='index.html'
         title="index"
 
     @test_site.collection
+    class TestBlog(Blog):
+        content_path = test_blog_dir
+        routes = ["blog"]
+        template = "blog.html"
+    @test_site.collection
     class TestCollection(Collection):
         content_path = "tests"
         PageParser = MarkdownPageParser
-        template = "page.html" 
 
     test_site.render()
     return test_site

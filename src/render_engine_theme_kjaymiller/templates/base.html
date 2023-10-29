@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include '_head.html' %}
-  <body class="dark:bg-slate-800 dark:text-slate-100"> 
-    <div class="flex flex-col h-screen">
-      {% include '_header.html' %}
-      <main class="flex-grow mx-2 md:mx-auto container">
-        {% block content %} {% endblock %}
-      </main role="main">
-      <div>
-      {% include '_footer.html' %}
-      </div>
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}{{SITE_TITLE}}{% endblock %}</title>
+        {% block head %}
+        {% for headers in head %}
+          {% for header in headers %}
+            {% include header %}
+          {% endfor %}
+        {% endfor %}
+        {% endblock %}
 
+    </head>
+    <body {% if body_class is defined %}class="{{"".join(body_class)}}"{%endif%}>
+      {% block body %}
+      <div class="flex flex-col h-screen">
+      {% include "components/_header.html" %}
+      <main role="main" class="flex-grow mx-2 md:mx-auto container">
+        {% block content %} {% endblock %}
+      </main>
+      <div>
+      {% include "components/_footer.html" %}
+      </div>
+      </div>
+      {% endblock %}
+    </body>
 </html>

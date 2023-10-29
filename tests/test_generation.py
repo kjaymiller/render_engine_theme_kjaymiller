@@ -3,8 +3,10 @@ Tests the generation logic of the templates
 """
 
 from typing import Literal
+
 import pytest
-from render_engine_theme_kjaymiller.kjaymiller import (
+
+from render_engine_theme_kjaymiller.tailwind_colors import (
     TailwindCSSColorSpec,
     get_color_string_value,
     get_theme_gradient_to,

@@ -3,9 +3,7 @@
 {% block head %}{% endblock %}
 {% block content %}
 <section>
-<div class="my-4">
-    <h1 class="text-4xl font-extrabold">{{title}}</h1>
-</div>
+    {% include "components/page_title.html" %}
 <article class="prose lg:prose-xl dark:prose-invert prose-slate">
     {{content}}
 </article>
