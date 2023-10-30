@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}{{title}}{% endblock %}
 {% block head %}
+  {{super()}}
   <!-- Meta Card Tags-->
   {% include "_og_card.html" %}
 {% endblock %}
@@ -21,7 +22,6 @@
       </div>
 
     <section class="section min-h-screen">
-          <h4>{{date}}</h4>
           {% if link %}<h4><strong>Source:</strong> <a href="{{link}}">{{link}}</a>
           <a href="{{link}}">🔗</a>{% endif %}
           </h4>
