@@ -5,22 +5,21 @@
   {{COLOR_MAIN | theme_gradient_to(header_gradient_inverval or 100) }}
   flex
   flex-wrap
+  justify-between
   items-baseline
   px-5
   py-2
   ">
   {% set TITLE_SIZE = theme.get('title_size', 'large') %}
   {% set sizes = {"large": "5xl", "medium": "3xl", "small": "xl"} %}
-    <h1 class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold text-gray-800">
-      <a class="no-underline" href="{{SITE_URL}}">{{SITE_TITLE}}</a>
+    <h1 class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold dark:text-gray-50 text-gray-800">
+      <a class="no-underline dark:text-slate-50" href="{{SITE_URL}}">{{SITE_TITLE}}</a>
     </h1>
-    </div>
-    <div class="my-2 p-2 flex justify-center">
-    
+    <div class="lg:inline-block my-2 p-2 flex flex-wrap">
     {% for link in NAVIGATION %}
       <a class="
-            p-3
-            mx-3
+            p-2
+            mx-2
             rounded-lg
             hover:bg-gray-100
             opacity-75
@@ -28,11 +27,10 @@
             hover:text-indigo-800
             font-semibold
             text-xl
-            hover:font-bold
-            dark:text-slate-200
-            text-slate-800
+            hover:font-semibold
+            text-slate-200
             no-underline
-          " href="{{SITE_URL}}{{link.url}}"
+          " href="{{link.url}}"
           aria-label="{{link.text}}">
           {% if link.icon is defined %}
           <i class="{{link.icon}}" aria-hidden="true" title="{{link.text}}"></i>
@@ -41,4 +39,6 @@
       </a>
       {% endfor %}
   </div>
+  </div>
+
 </nav>
