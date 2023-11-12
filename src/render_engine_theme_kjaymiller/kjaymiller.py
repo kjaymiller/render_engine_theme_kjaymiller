@@ -20,7 +20,7 @@ kjaymiller = Theme(
         "theme_color_value": get_color_string_value,
         },
     template_globals = {
-        "head": ["kjaymiller_com/_head.html"],
+        "head": "kjaymiller_com/_head.html",
         "body_class": "dark:bg-slate-800 dark:text-slate-100",
         "page_title_class": "text-2xl font-bold text-slate-900 dark:text-slate-100",
     },
