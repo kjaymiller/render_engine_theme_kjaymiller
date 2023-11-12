@@ -1,5 +1,6 @@
 {% extends 'base.html'%} 
 {% block body %}
+{{super()}}
   {% if hero %}
     <section class="py-4 my-2">
       {% if hero.target %}
@@ -53,4 +54,5 @@
     {% endfor %}
   {% endif %}
 </section>
+
 {% endblock %}
