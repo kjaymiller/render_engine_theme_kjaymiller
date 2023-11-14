@@ -10,7 +10,7 @@
   px-5
   py-2
   ">
-  {% set TITLE_SIZE = theme.get('title_size', 'large') %}
+  {% set TITLE_SIZE = theme.get('title_size', 'medium') %}
   {% set sizes = {"large": "5xl", "medium": "3xl", "small": "xl"} %}
     <h1 class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold dark:text-gray-50 text-gray-800">
       <a class="no-underline dark:text-slate-50" href="{{SITE_URL}}">{{SITE_TITLE}}</a>
