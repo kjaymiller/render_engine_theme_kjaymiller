@@ -11,7 +11,7 @@ readme = "README.md"
 dependencies = [
     'jinja2',
     'render-engine-tailwindcss==2023.10.2',
-    "render-engine>=2023.10.3a4"
+    "render-engine>=2023.11.1a1"
     ]
 
 [project.optional-dependencies]
