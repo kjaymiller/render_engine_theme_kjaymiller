@@ -1,4 +1,4 @@
-import pytest
+
 
 def test_stylesheets_are_added(site):
     """asserts that tailwind and pygments stylesheets are added to the head"""
