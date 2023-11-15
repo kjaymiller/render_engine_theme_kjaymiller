@@ -1,10 +1,10 @@
 {% extends 'base.html'%} 
 {% block body %}
-{{super()}}
 {% block header %}
   {% include "kjaymiller_com/components/_header.html" %}
 {% endblock %}
   {% if hero %}
+  <div class="container">
     <section class="py-4 my-2">
       {% if hero.target %}
       <h2 class="text-3xl my-3 font-semibold"><a href="{{hero.target}}">{{hero.title}}</a></h2>
@@ -57,6 +57,7 @@
     {% endfor %}
   {% endif %}
 </section>
+</div>
 {% block footer %}
 {% include "kjaymiller_com/components/_footer.html" %}
 {% endblock %}
