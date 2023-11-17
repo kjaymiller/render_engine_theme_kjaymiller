@@ -1,10 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'kjaymiller_com/components/_base.html' %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
-<h2 class="mt-8 title text-2xl font-semibold">{{title}}</h2>
-<div class="">
-    <div class="container mx-auto">
-        {% include '_archive.html' %}
-    </div>
+  <div class="container mx-auto">
+    <h2 class="mt-8 title text-2xl font-semibold">{{title}}</h2>
+    {% include '_archive.html' %}
   </div>
 {% endblock %}
