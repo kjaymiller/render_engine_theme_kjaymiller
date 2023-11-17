@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
-{% block title %}{{title}}{% endblock %}
+{% extends 'kjaymiller_com/components/_base.html' %}
 {% block head %}
   <!-- Meta Card Tags-->
+  {{super()}}
   {% include "_og_card.html" %}
 {% endblock %}
 {% block content %} 
-  <article class="prose lg:prose-xl dark:prose-invert prose-slate">
+  <div class="container mx-auto">
+  <article class="tracking-wide prose dark:prose-invert prose-slate">
     {% if image is defined %}
       <div class="feature-image overflow-hidden">
         <img src="{{image}}" class="max-h-72 rounded-lg shadow">
@@ -35,4 +36,5 @@
       <a href="/blog/blog1.html" class="subtitle is-5 text-link hover:underline font-bold">Back to
         Blogs...</a>
     </section>
+  </div>
 {% endblock %}
