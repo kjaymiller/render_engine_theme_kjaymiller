@@ -1,8 +1,8 @@
 {% set COLOR_MAIN = theme.get('colors', {"main":"gray-600"}).main %}
-<nav role="navigation"><div class="
-  bg-gradient-to-br
-  from-{{COLOR_MAIN}}
-  {{COLOR_MAIN | theme_gradient_to(header_gradient_inverval or 100) }}
+<nav 
+  role="navigation"
+  class="bg-gradient-to-br from-{{COLOR_MAIN}} {{COLOR_MAIN | theme_gradient_to(header_gradient_inverval or 100) }}"
+><div class="
   flex
   flex-wrap
   justify-between
@@ -15,11 +15,11 @@
     <h1 class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold dark:text-gray-50 text-gray-800">
       <a class="no-underline dark:text-slate-50" href="{{SITE_URL}}">{{SITE_TITLE}}</a>
     </h1>
-    <div class="lg:inline-block my-2 p-2 flex flex-wrap">
+    <button onclick="toggleMenu()" class="my-4"><i class="fa-solid fa-bars"></i></button>
+  </div>
+    <div id="header-menu" class="p-2 flex flex-wrap justify-around" style="display: none;">
     {% for link in NAVIGATION %}
       <a class="
-            p-2
-            mx-2
             rounded-lg
             hover:bg-gray-100
             opacity-75
@@ -39,6 +39,15 @@
       </a>
       {% endfor %}
   </div>
-  </div>
-
 </nav>
+<script type="text/javascript">
+  function toggleMenu() {
+    var menu = document.getElementById('header-menu');
+    // Create a toggle for the menu that drops down behind the header
+    if (menu.style.display === "none") {
+      menu.style.display = "flex";
+    } else {
+      menu.style.display = "none";
+    }
+  }
+  </script>

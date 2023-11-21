@@ -1,28 +1,28 @@
 {% extends 'kjaymiller_com/components/_base.html'%} 
 {% block content %}
-  <div class="container mx-auto">
+  <div class="mx-auto">
   {% if hero %}
-    <section class="py-4 my-2">
+    <section lass="py-4 my-2">
+      {% if hero.from_template %}
+      {% include hero.from_template %}
+      {% else %}
       {% if hero.target %}
       <h2 class="text-3xl my-3 font-semibold"><a href="{{hero.target}}">{{hero.title}}</a></h2>
       {% else %}
       <h2 class="text-3xl my-3 font-semibold">{{hero.title}}</h2>
       {% endif %}
       <article class="prose lg:prose-lg dark:prose-invert prose-slate">
-        {% if hero.from_template %}
-        {% include hero.from_template %}
-        {% else %}
         {{hero.content}}
         {% endif %}
       </article>
     </section>
   {% endif %}
   {% if secondary %}
-  <section class="my-2 py-2">
-    {% if hero.target %}
-    <h2 class="my-4 text-2xl font-semibold"><a href="{{secondary.target}}">{{secondary.title}}</a></h2>
+  <section class="container mx-auto my-2 py-2">
+    {% if secondary.target %}
+    <h2 class="mx-4 text-3xl font-light"><a href="{{secondary.target}}">{{secondary.title}}</a></h2>
     {% else %}
-    <h2 class="my-4 text-2xl font-semibold">{{secondary.title}}</h2>
+    <h2 class="mx-4 text-3xl font-light">{{secondary.title}}</h2>
     {% endif %}
     {% if secondary.from_template%}
         {% include secondary.from_template %}
@@ -30,9 +30,12 @@
       {{secondary.content}}
     {% endif %}
   {% endif %}
+  <div class="text-right">
+    <p><a class="underline hover:text-{{theme.colors.main}}" href="{{secondary.targer}}">More from {{secondary.title}}</a></p>
+  </div>
   </section>
   {% if other %}
-<section>
+<section class="container">
     {% if other.target %}
     <h2><a href="{{other.target}}">{{other.title}}</a></h2>
     {% else %}
