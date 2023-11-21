@@ -86,7 +86,7 @@ pytest-playwright==0.4.3
     # via render-engine-theme-kjaymiller (pyproject.toml)
 python-dateutil==2.8.2
     # via render-engine
-python-frontmatter==1.0.0
+python-frontmatter==1.0.1
     # via render-engine
 python-slugify==8.0.1
     # via
