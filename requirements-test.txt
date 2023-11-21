@@ -100,7 +100,7 @@ render-engine-tailwindcss==2023.10.2
     # via render-engine-theme-kjaymiller (pyproject.toml)
 requests==2.31.0
     # via pytest-base-url
-rich==13.6.0
+rich==13.7.0
     # via render-engine
 ruff==0.1.5
     # via render-engine-theme-kjaymiller (pyproject.toml)
