@@ -8,7 +8,7 @@ axe-playwright-python==0.1.4
     # via render-engine-theme-kjaymiller (pyproject.toml)
 black==23.11.0
     # via render-engine-theme-kjaymiller (pyproject.toml)
-certifi==2023.7.22
+certifi==2023.11.17
     # via requests
 charset-normalizer==3.3.2
     # via requests
