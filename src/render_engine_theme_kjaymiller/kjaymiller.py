@@ -1,7 +1,7 @@
 import pathlib
 
 from jinja2 import PackageLoader
-from render_engine.utils.themes import Theme
+from render_engine.themes import Theme
 from render_engine_tailwindcss import TailwindCSS
 
 from .tailwind_colors import (
