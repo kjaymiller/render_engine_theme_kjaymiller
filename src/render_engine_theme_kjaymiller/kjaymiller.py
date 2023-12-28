@@ -10,6 +10,7 @@ from .tailwind_colors import (
 )
 
 kjaymiller = Theme(
+    prefix="kjaymiller_com",
     loader=PackageLoader("render_engine_theme_kjaymiller", "templates"),
     static_dir=pathlib.Path(__file__).parent / "static",
     plugins=[TailwindCSS],
