@@ -40,6 +40,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e .
           python -m render_engine build docs.app:app
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
