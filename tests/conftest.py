@@ -2,8 +2,8 @@ from multiprocessing import Process
 
 import pytest
 from render_engine import Blog, Collection, Page, Site
-from render_engine.parsers.markdown import MarkdownPageParser
-from render_engine.watcher.event import spawn_server
+from render_engine.cli.event import spawn_server
+from render_engine_markdown import MarkdownPageParser
 
 import render_engine_theme_kjaymiller.kjaymiller as theme
 
@@ -35,7 +35,7 @@ def site(tmp_path_factory):
     @test_site.collection
     class TestCollection(Collection):
         content_path = "tests"
-        PageParser = MarkdownPageParser
+        Parser = MarkdownPageParser
 
     test_site.render()
     return test_site
