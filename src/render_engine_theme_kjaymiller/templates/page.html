@@ -1,12 +1,10 @@
-{% extends 'kjaymiller_com/components/_base.html' %}
+  {% extends 'kjaymiller_com/components/_base.html' %}
 {% block title %}{{title}}{% endblock%}
-{% block content %}
-<section class="container mx-auto">
+  {% block content_body %}
     {% include "components/page_title.html" %}
-<article class="prose lg:prose-xl dark:prose-invert prose-slate">
+  <article class="prose lg:prose-xl dark:prose-invert prose-slate">
     {{content}}
 </article>
-</section>
 {% endblock %}
 {% block add_ons %}
 {% endblock %}

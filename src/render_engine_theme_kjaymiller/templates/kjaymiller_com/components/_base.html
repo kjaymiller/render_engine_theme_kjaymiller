@@ -2,10 +2,12 @@
 {% block header %}
   {% include "kjaymiller_com/components/_header.html" %}
 {% endblock %}
-<div class="container p-2 mx-auto">
 {% block content %}
-{% endblock %}
+<div class="container p-2 mx-auto">
+  {% block content_body %}
+  {% endblock %}
 </div>
+{% endblock %}
 {% block footer %}
 {% include "kjaymiller_com/components/_footer.html" %}
 {% endblock %}
