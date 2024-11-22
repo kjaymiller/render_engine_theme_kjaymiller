@@ -3,11 +3,10 @@ with context %}
 <hr class="mt-4" />
 <footer
   role="contentinfo"
-  class="lg:grid lg:grid-cols-3 grid-flow-col bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4"
+  class="lg:grid lg:grid-cols-3 grid-flow-col bottom-0 container mx-auto shadow rounded-md bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4"
 >
   <div id="footer-column-1" class="text-small">
-    {% if theme.footer_column1 %} {% include theme.footer_column1 %} {% endif %}
-
+    {% if theme.footer_column1 %} {% include theme.footer_column1 %} {% else %}
     <p>{{SITE_URL}}</p>
     <p>
       Website Created with
@@ -19,6 +18,7 @@ with context %}
         >kjaymiller theme</a
       >
     </p>
+    {% endif %}
   </div>
   <div id="footer-column-2">
     {% if theme.footer_column2 %} {% include theme.footer_column2 %} {% endif %}
