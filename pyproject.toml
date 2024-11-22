@@ -12,7 +12,7 @@ dependencies = [
     'jinja2',
     'render-engine-tailwindcss>=2024.1.1a2',
     'render-engine-markdown',
-    "render-engine>=2024.1.1a2"
+    "render-engine[cli]"
     ]
 
 [project.optional-dependencies]
