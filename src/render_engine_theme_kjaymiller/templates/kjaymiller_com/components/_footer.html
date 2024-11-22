@@ -1,18 +1,27 @@
-{% from "kjaymiller_com/components/social-cards.html" import add_social_card with context %}
-<hr class="mt-4 "/>
-<footer role="contentinfo" class="lg:grid lg:grid-cols-3 grid-flow-col bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4">
+{% from "kjaymiller_com/components/social-cards.html" import add_social_card
+with context %}
+<hr class="mt-4" />
+<footer
+  role="contentinfo"
+  class="lg:grid lg:grid-cols-3 grid-flow-col bottom-0 container mx-auto shadow rounded-md bottom-0 bg-slate-50 dark:bg-slate-800 dark:text-slate-100 px-4 my-4"
+>
   <div id="footer-column-1" class="text-small">
+    {% if theme.footer_column1 %} {% include theme.footer_column1 %} {% endif %}
+
     <p>{{SITE_URL}}</p>
-    <p>Website Created with <a href="https://github.com/render-engine/render-engine">Render Engine</a> and <a
-                            class="hover:underline" href="https://github.com/kjaymiller/render_engine_theme_kjaymiller">kjaymiller theme</a>
-    
-    </div>
-    <div id="footer-column-2">
-    {% if theme.footer_column2 %}
-      {% include theme.footer_column2 %}
-    {% endif %}
-    </div>
-    <div id="footer-column-3">
-      {{add_social_card()}}
+    <p>
+      Website Created with
+      <a href="https://github.com/render-engine/render-engine">Render Engine</a>
+      and
+      <a
+        class="hover:underline"
+        href="https://github.com/kjaymiller/render_engine_theme_kjaymiller"
+        >kjaymiller theme</a
+      >
+    </p>
   </div>
+  <div id="footer-column-2">
+    {% if theme.footer_column2 %} {% include theme.footer_column2 %} {% endif %}
+  </div>
+  <div id="footer-column-3">{{add_social_card()}}</div>
 </footer>
