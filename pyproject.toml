@@ -9,27 +9,27 @@ description = "This is a theme based on the design of kjaymiller.com at the time
 readme = "README.md"
 
 dependencies = [
-    'jinja2',
-    'render-engine-tailwindcss>=2024.1.1a2',
-    'render-engine-markdown',
-    "render-engine[cli]"
-    ]
+  'jinja2',
+  'render-engine-tailwindcss>=2024.1.1a2',
+  'render-engine-markdown',
+  "render-engine[cli]=2024.11.1a2",
+]
 
 [project.optional-dependencies]
 dev = [
-    "axe-playwright-python",
-    "playwright",
-    "pytest",
-    "pytest-mock",
-    "pytest-playwright",
-    "ruff",
-    ]
+  "axe-playwright-python",
+  "playwright",
+  "pytest",
+  "pytest-mock",
+  "pytest-playwright",
+  "ruff",
+]
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [project.urls]
 homepage = "https://kjaymiller.github.io/render_engine_theme_kjaymiller"
