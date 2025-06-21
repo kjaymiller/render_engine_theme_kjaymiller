@@ -1,48 +1,39 @@
 {% set COLOR_MAIN = theme.get('colors', {"main":"gray-600"}).main %}
-<nav 
+<nav
   role="navigation"
   class="bg-gradient-to-br from-{{COLOR_MAIN}} {{COLOR_MAIN | theme_gradient_to(header_gradient_inverval or 100) }}"
-><div class="
-  flex
-  flex-wrap
-  justify-between
-  items-baseline
-  px-5
-  py-2
-  ">
-  {% set TITLE_SIZE = theme.get('title_size', 'medium') %}
-  {% set sizes = {"large": "5xl", "medium": "3xl", "small": "xl"} %}
-    <h1 class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold dark:text-gray-50 text-gray-800">
-      <a class="no-underline dark:text-slate-50" href="{{SITE_URL}}">{{SITE_TITLE}}</a>
+>
+  <div class="flex flex-wrap justify-between items-baseline px-5 py-2 sticky">
+    {% set TITLE_SIZE = theme.get('title_size', 'medium') %} {% set sizes =
+    {"large": "5xl", "medium": "3xl", "small": "xl"} %}
+    <h1
+      class="title mx-3 text-{{sizes[TITLE_SIZE]}} font-bold dark:text-gray-50 text-gray-800"
+    >
+      <a class="no-underline dark:text-slate-50" href="{{SITE_URL}}"
+        >{{SITE_TITLE}}</a
+      >
     </h1>
-    <button onclick="toggleMenu()" class="my-4"><i class="fa-solid fa-bars"></i></button>
+    <button onclick="toggleMenu()" class="my-4">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </div>
-    <div id="header-menu" class="p-2 flex flex-wrap justify-around" >
+  <div id="header-menu" class="p-2 flex flex-wrap justify-around">
     {% for link in NAVIGATION %}
-      <a class="
-            rounded-lg
-            hover:bg-gray-100
-            opacity-75
-            hover:opacity-100
-            hover:text-indigo-800
-            font-semibold
-            text-xl
-            hover:font-semibold
-            text-slate-200
-            no-underline
-          " href="{{link.url}}"
-          aria-label="{{link.text}}">
-          {% if link.icon is defined %}
-          <i class="{{link.icon}}" aria-hidden="true" title="{{link.text}}"></i>
-          {% endif %}
-          {{link.text}}
-      </a>
-      {% endfor %}
+    <a
+      class="rounded-lg hover:bg-gray-100 opacity-75 hover:opacity-100 hover:text-indigo-800 font-semibold text-xl hover:font-semibold text-slate-200 no-underline"
+      href="{{link.url}}"
+      aria-label="{{link.text}}"
+    >
+      {% if link.icon is defined %}
+      <i class="{{link.icon}}" aria-hidden="true" title="{{link.text}}"></i>
+      {% endif %} {{link.text}}
+    </a>
+    {% endfor %}
   </div>
 </nav>
 <script type="text/javascript">
   function toggleMenu() {
-    var menu = document.getElementById('header-menu');
+    var menu = document.getElementById("header-menu");
     // Create a toggle for the menu that drops down behind the header
     if (menu.style.display === "none") {
       menu.style.display = "flex";
@@ -50,4 +41,4 @@
       menu.style.display = "none";
     }
   }
-  </script>
+</script>
