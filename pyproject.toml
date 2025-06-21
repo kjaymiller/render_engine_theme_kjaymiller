@@ -17,19 +17,19 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "axe-playwright-python",
-    "playwright",
-    "pytest",
-    "pytest-mock",
-    "pytest-playwright",
-    "ruff",
-    ]
+  "axe-playwright-python",
+  "playwright",
+  "pytest",
+  "pytest-mock",
+  "pytest-playwright",
+  "ruff",
+]
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [project.urls]
 homepage = "https://kjaymiller.github.io/render_engine_theme_kjaymiller"
