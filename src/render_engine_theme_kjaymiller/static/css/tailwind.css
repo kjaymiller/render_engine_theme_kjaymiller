@@ -28,3 +28,8 @@ aside.admonition {
 .prose > a {
   @apply underline;
 }
+
+
+a {
+  @apply underline
+}
