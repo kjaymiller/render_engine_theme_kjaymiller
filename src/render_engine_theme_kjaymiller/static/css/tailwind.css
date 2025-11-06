@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
+@source '../../output/**/*.{html, js}';
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -26,4 +28,3 @@ aside.admonition {
 .prose > a {
   @apply underline;
 }
-
