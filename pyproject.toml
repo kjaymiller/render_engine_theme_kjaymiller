@@ -16,6 +16,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+test = [
+  "axe-playwright-python",
+  "playwright",
+  "pytest",
+  "pytest-mock",
+  "pytest-playwright",
+  "ruff",
+]
 dev = [
   "axe-playwright-python",
   "playwright",

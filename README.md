@@ -77,3 +77,58 @@ app.site_settings.update(theme)
 ```bash
 python -m render_engine serve --build app:app
 ```
+
+## Development & Testing
+
+This project uses `just` for common development tasks and `nox` for testing across multiple Python versions.
+
+### Quick Start with Just
+
+```bash
+# Run tests
+just test
+
+# Run linting
+just lint
+
+# Run both linting and tests
+just check
+
+# Run tests with coverage
+just test-coverage
+```
+
+### Using Nox for Multi-Version Testing
+
+Test the theme across Python 3.11, 3.12, 3.13, and 3.14:
+
+```bash
+# Run tests on all Python versions
+nox -s test
+
+# Run linting on all Python versions
+nox -s lint
+
+# Run both tests and linting
+nox -s check
+```
+
+### Development Setup
+
+```bash
+# Install with uv (recommended)
+uv sync
+
+# Install with pip
+pip install -e ".[test]"
+
+# Run tests
+just test
+```
+
+## Available Just Commands
+
+- `just test` - Run pytest on current Python version
+- `just test-coverage` - Run pytest with coverage reporting
+- `just lint` - Run ruff linting checks
+- `just check` - Run both linting and tests
