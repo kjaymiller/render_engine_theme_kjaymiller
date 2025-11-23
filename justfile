@@ -22,3 +22,6 @@ merge:
 
 release version:
     gh release create {{version}} --generate-notes
+
+prerelease version:
+    gh release create {{version}} --generate-notes -p
