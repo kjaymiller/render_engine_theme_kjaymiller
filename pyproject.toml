@@ -10,9 +10,9 @@ readme = "README.md"
 
 dependencies = [
   'jinja2',
-  'render-engine-tailwindcss>=2025.1.1a1',
+  'render-engine-tailwindcss>=2025.11.1a1',
   'render-engine-markdown',
-  'render-engine[cli]>=2024.11.2a1',
+  'render-engine[cli]>=2025.11.1',
 ]
 
 [project.optional-dependencies]
@@ -57,3 +57,7 @@ target-version = "py311"
 line-length = 120
 src = ["src"]
 ignore-init-module-imports = true
+
+[tool.render-engine.cli]
+module = "docs.app"
+site = "app"

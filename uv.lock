@@ -444,7 +444,7 @@ wheels = [
 
 [[package]]
 name = "render-engine"
-version = "2025.9.1a1"
+version = "2025.11.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jinja2" },
@@ -458,9 +458,9 @@ dependencies = [
     { name = "render-engine-parser" },
     { name = "rich" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ea/c8/aaac9c8e3604064cfa8750c4474cf17bed3f807d58ce09a84e26cea88d18/render_engine-2025.9.1a1.tar.gz", hash = "sha256:f2546c3ee7da0a8fd113ce1a1828fde5d40ad0e1142c25f2bb7758144d85755c", size = 11879572, upload-time = "2025-09-04T16:14:31.834Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/72/56/4b3046d9493b930a8f2c3afc022eacc18dad7275fc77c3e83d4f92550143/render_engine-2025.11.1.tar.gz", hash = "sha256:0c468d57aa85a20e3ba4ffc6abedc6bd09ffa9d0edb66484669aaa7f87d1a03e", size = 11888486, upload-time = "2025-11-18T19:28:40.456Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ef/a6/feca60f37e3616b13ff88989368e2154a85ea73dfcee0111bf5e1843395a/render_engine-2025.9.1a1-py3-none-any.whl", hash = "sha256:c7e099fde9ea638f330353bab6b12fec399a9bd0a50a5ca3ea1c28af023d1f7e", size = 28892, upload-time = "2025-09-04T16:14:29.871Z" },
+    { url = "https://files.pythonhosted.org/packages/b5/1f/06591352b623204f0db4c195798fd69c377838422aa40ef62a80ed41acbd/render_engine-2025.11.1-py3-none-any.whl", hash = "sha256:5c738c66b929d4be3b5137ba09b33d576e1f2dc6011dc04d8d0d0381a83e3318", size = 34345, upload-time = "2025-11-18T19:28:37.465Z" },
 ]
 
 [package.optional-dependencies]
@@ -564,7 +564,7 @@ requires-dist = [
     { name = "pytest-mock", marker = "extra == 'test'" },
     { name = "pytest-playwright", marker = "extra == 'dev'" },
     { name = "pytest-playwright", marker = "extra == 'test'" },
-    { name = "render-engine", extras = ["cli"], specifier = ">=2024.11.2a1" },
+    { name = "render-engine", extras = ["cli"], specifier = ">=2025.11.1" },
     { name = "render-engine-markdown" },
     { name = "render-engine-tailwindcss", specifier = ">=2025.1.1a1" },
     { name = "ruff", marker = "extra == 'dev'" },
