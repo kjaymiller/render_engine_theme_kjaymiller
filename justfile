@@ -16,3 +16,6 @@ typecheck:
 check:
   just lint
   just test
+
+merge:
+    gh pr merge --squash -d
