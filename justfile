@@ -19,3 +19,6 @@ check:
 
 merge:
     gh pr merge --squash -d
+
+release version:
+    gh release create {{version}} --generate-notes
