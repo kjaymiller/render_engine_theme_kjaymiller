@@ -16,6 +16,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+test = [
+  "axe-playwright-python",
+  "playwright",
+  "pytest",
+  "pytest-mock",
+  "pytest-playwright",
+  "ruff",
+]
 dev = [
   "axe-playwright-python",
   "playwright",
@@ -33,7 +41,7 @@ package-dir = { "" = "src" }
 
 [project.urls]
 homepage = "https://kjaymiller.github.io/render_engine_theme_kjaymiller"
-repository = "https://github.com/kjaymiller/render-engine-theme-kjaymiller"
+repository = "https://github.com/kjaymiller/render_engine_theme_kjaymiller"
 documentation = "https://github.io/kjaymiller/render-engine-theme-kjaymille"
 
 [tool.pytest.ini_options]
